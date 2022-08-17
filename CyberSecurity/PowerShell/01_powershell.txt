@@ -1,0 +1,86 @@
+***** Cuatro niveles de permisividad *****
+
++Reastricted: no permite la ejecución de script, Power shell esta en modo interactivo
+
++AllSigned: todos los script deben estar autenticados, antes de ser ejecutados; es la opción más restrictiva
+
++RemoteSigned: en esta opción solo deben estar autenticados los script que procedan de una ubicación remota, como los descargados. Los script propios estan firmados
+
++Unrestricted: esta opción ejecutará cualquier script sin importar su origen
+
+
+
+Muestra la politica actual
+Ps> Get-ExecutionPolicy
+
+Cambia la politica, ejecutando Power shell como admin
+Ps> Set-ExecutionPolicy nivel_de_permisividad
+Ps> Set-ExecutionPolicy RemoteSigned
+
+
+Impresión en pantalla
+Ps> Write-Host 'mensaje'
+
+$nombre = 'Ardanys Canchila M'
+Que es el Path
+Los comandos son las instrucciones básicas que tiene el SO para ejecutarse, y que estan almacenados en diferentes directorios para poder ejecuarse
+
+Variable, el primer caracter siempre es el simbolo $
+Lo valores de texto se encierran entre comillas simples o dobles
+Ps> $nombre = 'Ardanys Canchila M'                                  
+
+	-modo explicito, usando el cmdlet NEw-Variable
+	Ps> New-Variale nombre
+
+	-O también
+	Ps> New-Variable -Name nombre
+
+	-con valor
+	Ps> New-Variable -Name nombre -Value 'Ardanyscm'
+
+Constantes, son variables que no cambian su valor en tiempo de ejecución
+Ps> New-Variable -Name constante -Value 'acm' -Option ReadOnly
+
+Listado variables definidas
+Ps> Get-Variable
+
+Solicitar valores
+Ps> $nombre5 = Read-Host 'Digite su nombre'
+
+Tipos de datos
+	-string
+	-char un solo caracter unicodo
+	-int entero con signo de 32 bits
+	-logn entero con signo de 64 bits
+	-single un numero de coma flotande de 32 bits
+	-double un numero de coma flotande de 64 bits
+	-datatime para almacenar hora y fecha
+	-bool True o False
+	-array conjunto de valores
+	-hashtable es un objeto que representa un tio														
+
+Obtener el tipo de una variable
+Ps> Write-Host $nombre5.GetType().Name																																																																																																																	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+OSINT -> David Pereira
+
+Metabuscadores: entre más palabras claves utilices mayor precisión
+			
+
+http://www.etools.ch/search.do
+https://search.carrot2.org/#/search/web
+https://www.dogpile.com/
+https://www.startpage.com/
+https://www.metacrawler.com/
+https://www.alltheinternet.com/
+https://www.infospace.com/
+https://www.search.com/
+https://all-io.net/
+https://ca.zapmeta.com/
+https://results.exite.com/
+https://metager.org/
+https://www.myallsearch.com/
+https://www.elocalfinder.com/HSearch.aspx
+https://www.izito.com/
+
+
+
+
+Temarios:
+
+metasearch
+training
+Seguro
+Protegido
+Ciberseguridad
+Blinda
+Kali
+Hacking Pentesting 
+NAC
+MAC
+Aprende
+Aprender
+Practica
+Capacitacion
+Network
+Access
+Control
+WiFi
+Wireless
+Inalámbrica Ethical
+Pruebas Hackear
+Hackeo
+Ataque
+Desarrollo PyCharm VisualStudio Code
+Linux
+Windows
+MACOSx
+Script
+Scripting  Python
+Python2 Python3 Vulnerabilidad Vulnerability Exploit Backdoor Malware Ransomware
+Virus
+Seguro
+Phishing
+Ingeniería
+Social
+Ingenieria
+Engaño
+Apt
+Gusano
+Troyano
+FUD
+DNS
+Exfiltrar
+Cifrado
+Encriptado
+Descifrar
+Comptia
+Ceh
+oscp
+Forense
+Computo
+Evidencia
+IoT
+Bluetooth
+Sniffer
+Wireshark

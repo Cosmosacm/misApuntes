@@ -1,0 +1,45 @@
+#################################################
+#						#
+#		introducción wget		#
+#						#
+#################################################
+
+
+   * ayuda sintaxis y opciones 
+
+$ wget -h
+
+
+   * descarga automatizada de archivos
+  
+$ wget -r --no-parent --reject "index.html" https://paginaconarchivos.com/descargas/
+
+	-r		--> de forma recursiva para descargar todo
+	--no-parent	--> no vaya más alla del padre
+	--reject	--> rechazar cualquier indexado
+
+
+   * descarga automatizada utilizando usuario y contraseña
+
+$ wget -r --no-parent --reject "index.html" https://paginaconarchivos.com/descargas/ --http-user=nombre_usuario --http-password=pwd_usuario
+
+
+   * descargar archivos por niveles
+
+$ wget -r --no-parent --level=n --reject "index.html*" https://paginaconarchivos.com/nuevo/niveles/
+
+	--level=0	--> todos los subniveles
+	--level=1	--> baja un subnivele
+	--level=2	--> baja dos subniveles
+	--level=3	--> baja tres subniveles
+	...		...
+	--level=x	--> baja x subniveles
+
+
+   * extraer imagenes de nuestro html
+
+$ wget -nd -r -A jpeg,jpg,bmp,gif,png https://paginaconarchivos.com/imagenes/ruta.html
+
+	-nd		--> no generar estructura de directorio
+	-A		--> añadir una lista blanca de extensiones de archivos
+

@@ -1,0 +1,35 @@
+Taller de Threat Hunting
+
+IP/TCP
+Wireshark
+NetFlow
+TCPDump
+Snort como herramienta de análisis
+Extraer tráfico de la memoria RAM
+
+
+$ wireshark &	
+
+se ejecuta la aplicación y libera la terminal, & lleva el proceso a background
+
+$ ps -fea | grep wireshark	identifica los procesos de wireshark
+
+
+NOTA: Nmap Permite
+	
+	- detectar contraseñas debiles
+	- validar versiones de wordpress anterior
+	- detectar waf
+	- hacer fingerprinting
+	- panel graving
+
+
+Cambiar la MAC del equipo
+
+$ macchanger
+$ macchanger -l
+
+Para validar la proceencia de la MAC https://macvendors.com/ 
+
+$ sudo tcpdump -r archivo.pcap
+

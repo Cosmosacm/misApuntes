@@ -1,0 +1,47 @@
+***** Estructura de comandos ***** 
+
++ Los nombres de todos los cmdlets siguen un patron común, formado por:
+	
+	-un verbo
+	-un guión
+	-un nombre en sigular. 
+
++ Power shell no distingue entre mayúsculas y minúsculas
+
++ Los camandos tienen argumentos y operandos, pueden ser opcionales y obligatorios
+
+En este ejemplo cp necesita dos operandos origen y destino	
+Ps> cp ruta_origen ruta_destino
+
+En este otro ejemplo cp tiene el argumento -R que modifica el comportamiento por defecto más los dos operandos origen y destino
+Ps> cp -R ruta_origen ruta_destino
+
+
+
+***** Comandos basicos *****
+
+Saber el numero de comandos disponibles en Power shell
+Ps> Get-Command -CommandType Cmdlet | Measure-Object
+
+Alias de dir o ls en Power shell es
+Ps> Get-ChildItem
+
+Ayuda en la shell
+Ps> Get-Help nombre_comando
+
+ayuda mas detallada
+Ps> Get-Help nombre_comando -Detailed
+
+ayuda con ejemplos
+Ps> Get-Help nombre_comando -Examples
+
+ayuda con información detallada de cada argumento del comando
+Ps> Get-Help nombre_comando -Full
+
+Ayuda y ejemplos de comandos online
+Ps> Get-Help -Online nombre_comando
+
+Descargar ayuda online en local o actualizarla
+Ps> Update-Help -Module Microsoft.PowerShell*
+
+

