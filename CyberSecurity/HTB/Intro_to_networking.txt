@@ -1,0 +1,49 @@
+	Introduction to Networking
+
+
+
+WAN -> protocolo BGP -> internet
+
+
+LAN/WLAN -> RFC 1918, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 -> internal network (home or office)
+
+
+VPN -> Virtual Private Networks -> conecta múltiples sitios de una red a una LAN
+
+	* site-to-site VPN -> unen redes a través de internet, permitiendo una comunicación como si fuera local
+	
+	* remote access VPN -> interfaz virtual entre un cliente y una red, se considera importante la tabla de enrutamiento
+				     Si la VPN crea rutas para redes especificas se denomina split-tunnel VPN, donde la conexión a internet no sale de la VPN
+
+	* SSL VPN -> VPN que se realiza dentro del navegador web ej: HackTheBox Pwnbox
+
+
+GAN -> Global Area Network
+
+MAN -> Metropolitan Area Network -> conexión de varias LAN de proximidad geografíca en un area metropolitana
+
+PAN -> Personal Area Network -> conexión de dispositivos finales modernos para compartir datos
+
+WPAN -> Wireless Personal Area Network -> basada en tecnología bluetooth o wireless USB
+	
+	Piconet -> bluetooth
+	
+	IoT -> se utiliza WPAM con velocidades de datos bajas para control y monitoreo. Protocolos Insteon, Z-wave y ZigBee para smart homes y domotica	
+
+
+	Networking Topoligies
+
+Una topología de red es una disposición típica y una conexión física o lógica de dispositivos en una red.
+
+
+1. Conexiones (medio): cable par-trensado, cable coaxial, fibra optica, otros (radio enlaces)
+
+2. Nodes - Network Interface Controller (NIC): Los nodos de red son los puntos de conexión del medio de transmisión a los transmisores y receptores
+
+
+	Repeaters		Hubs		Bridges		Switches
+	
+	Router/Modem	Gateways	Firewalls		switch capa 2
+
+
+3. Clasificación: 

