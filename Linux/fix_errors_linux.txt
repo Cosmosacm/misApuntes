@@ -1,0 +1,31 @@
+
+	***  Inicio error zsh compinit ***
+
+al ejecutar:
+
+$ sudo su
+
+se obtine el mensaje:
+
+zsh compinit: insecure directories, run compaudit for list.
+Ignore insecure directories and continue [y] or abort compinit [n]?
+
+
+ejecutar:
+
+# compaudit
+
+se obtine la ruta que ocasiona el error:
+
+# cd /usr/local/share/zsh/nombre_dir/nombre_archivo
+
+ejecutar:
+
+# exit
+$ cd /usr/local/share/zsh/nombre_dir 
+
+$ sudo chmod -R 755 nombre_archivo
+$ sudo chown -R root:root nombre_archivo
+
+	*** Fin error zsh compinit ***
+

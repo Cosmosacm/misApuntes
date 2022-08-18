@@ -1,0 +1,25 @@
+
+		*** Configurar fondo de pantalla con feh ***
+
+
+	instalar feh 
+
+$ sudo apt install feh -y
+
+
+	definir ruta del directorio para las imagenes
+
+$ mkdir /home/nombre_usuario/Documents/imagenes/nombre_dir
+
+
+	comando para activar la imagen como fondo de pantalla
+
+$ feh --bg-fil /home/nombre_usuario/Documents/nombre_dir
+
+
+	configurar fondo en administrador de ventanas (bspwn) para que cargue al iniciar el equipo
+
+$ nano ~/.config/bspwm/bspwmrc
+
+	agregar linea de comando en el archivo
+feh --bg-fil /home/nombre_usuario/Documents/nombre_dir

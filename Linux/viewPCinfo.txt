@@ -1,0 +1,12 @@
+
+	*** Version OS ***
+
+$ lsb_release -a
+
+$ hostnamectl
+
+$ cat /etc/os-release
+
+$ cat /proc/version
+
+
