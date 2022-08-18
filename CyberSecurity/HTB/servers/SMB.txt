@@ -1,0 +1,40 @@
+
+==================== Protocolo SMB (Server Message Block) ====================
+
+ 	-> port 445
+
+
+   *** Script smbclient -> establece conexión con el server SMB ***
+
+$ sudo apt install smbclient
+
+
+   al conectar sin usuario, por defecto utiliza el user de la máquina del cliente. Password en blanco
+
+$ smbclient -L target_ip	visualizar tablas de host
+				-> ADMIN$	administra recursos compartidos ocultos de la red de la familia Windows NT
+				-> C$		administra recursos compartidos C:\
+				-> IPC$		comunicacion compartida entre procesos
+				-> WorkShares	personalizar recursos compartidos
+
+
+$ smbclient \\\\target_ip\\ADMIN$
+
+$ smbclient \\\\target_ip\\C$
+
+$ smbclient \\\\target_ip\\WorkShares
+
+
+   conexión establecida
+
+smb: \> 
+
+smb: \> help
+
+smb: \> ls	-> listar contenido del directorio actual
+
+smb: \> cd	-> similar en la shell de linux
+
+smb: \> get	-> descargar el contenido del directorio en el directorio desde donde ejecutamos el smbclient
+
+   
