@@ -1,3 +1,9 @@
 # Se excluyen las siguientes extensiones
-.acm
-.ovpn
+*.acm
+*.ovpn
+*.mp4
+*.mp3
+*.pub
+
+# se excluyen los nombres
+id_rsa
