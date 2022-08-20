@@ -1,5 +1,7 @@
 
-	*** Version OS ***
+
+==================== Información Sistema Operativo ====================
+
 
 $ lsb_release -a
 
@@ -9,4 +11,44 @@ $ cat /etc/os-release
 
 $ cat /proc/version
 
+
+==================== Leer Datos en una USB/Pendrive, disco externo ====================
+
+  antes de insertar la unidad externa validar los discos actuales
+
+$ ls -l /deb/sd*
+
+
+  insertamos el disco externo y volvemos a validar, los nuevos elementos corresponden al disco externo
+  generalmente corresponde a sdb1, el numero varía dependiendo cuantos discos insertamos o la cantidad
+  de particiones que este tenga
+
+$ ls -l /deb/sd*  
+
+
+   validar en el directorio /media que directorios existen; crear directorio usb si no existe con privilegios root
+
+$  ls /media
+
+$ sudo mkdir /media/usb
+
+
+   montar la unidad de disco externa, tener en cuenta el tipo de formato que tenga
+
+$ sudo mount -t tipo_formato /dev/nombre_disco /media/usb
+
+ ejemplo
+
+$ sudo mount -t vfat /dev/sdb1 /media/usb		FAT	-> vfat
+							NTFS	-> ntfs-3g
+							ext4	-> ext4
+
+  desmontar la unidad de disco externa
+
+$ sudo umunt /media/usb
+
+
+  
+   NOTA: si desea leer mas de un disco externo se deben crear más directorios para lectura ej. usb1, usb2, etc...
+   
 
