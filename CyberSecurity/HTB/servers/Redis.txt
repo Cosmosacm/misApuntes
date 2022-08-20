@@ -1,10 +1,8 @@
-==================== Databases Redis (REmote DIctionay Server) ====================
+==================== Databases Redis (REmote DIctionary Server) ====================
 
 
-   es un almacén de datos clave-valor NoSQL avanzado de código abierto que se utiliza como 
+   es un almacén de datos llave-valor NoSQL avanzado de código abierto que se utiliza como 
    base de datos, caché y agente de mensajes.
-
-10.129.236.12510.129.236.125
 
         -> port 6379
 
@@ -19,8 +17,7 @@ $ sudo apt install redis-cli
 
 $ redis-cli -h target_ip -p 6379
 
-target_ip:puerto>		->    conexión establecida
-
+target_ip:puerto>	->    conexión establecida
 
 
    visualizar información y estadisticas del host
@@ -41,10 +38,3 @@ target_ip:puerto> keys *
    obtener valor de las llaves
 
 target_ip:puerto> get nombre_key
-
-
-
-
-
-
-
