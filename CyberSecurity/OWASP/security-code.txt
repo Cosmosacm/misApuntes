@@ -1,0 +1,36 @@
+
+==================== Ciclo de Vida del Desarrollo de Software ====================
+
+         ---> Requerimientos -> Diseño -> Desarrollo ----
+        |                                                |
+        |                                                |
+         <--- Operaciones <- Despliegue <- Pruebas <-----
+
+
+   La ciberseguridad aplica y debería estar presente en cada una de las fases del ciclo de vida del 
+   desarrollo de software. 
+   En la fase de desarrollo, los programadores deben conocer metodologías de buenas practicas de seguridad
+   como las que se pueden encontrar en OWASP.
+
+    Tener en cuenta los siguientes proyecto de OWASP:
+
+        * Security knowledge framework (framework de conocimientos de seguridad)
+            Aprender a como desarrollar aplicaciones web seguras desde el principio
+
+        * Web security testing guide (guía de pruebas de seguridad web)
+            Aprender a realizar pruebas de seguridad a las aplicaciones web
+
+        * OWASP top ten 
+            Los 10 riesgos de seguridad más críticos en presentes en aplicaciones web
+
+        * Juice shop
+            Aplicación web insegura, compuesta de desafíos donde se puede practicar hacking web, útil para el
+            aprendizaje en ciberseguridad, para demostraciones de lo que no se debe hacer. 
+
+        * Zep attack proxy (ZAP)
+            Es una herramienta gratuita de prueba de penetración, de código abierto, que corresponde a un proxy
+            de interceptación, utilizado para interceptar, inspecionar y modificar los mensajes enviados entre
+            el navegador web y la aplicación web.
+
+    
+    referencia: https://owasp.org/

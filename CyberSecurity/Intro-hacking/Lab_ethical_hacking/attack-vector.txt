@@ -1,0 +1,19 @@
+
+==================== Vectores de Ataque ====================
+
+
+   * Inyección de código
+   * Pérdida de autenticación
+   * Pérdida de controles de acceso
+   * Uso de componentes con vulnerabilidades conocidas
+   * Registros y monitoreos insuficientes
+   * Deserialización insegura
+
+
+
+   Ejemplos:
+      https://www.bleepingcomputer.com/news/security/the-solarwinds-cyberattack-the-hack-the-victims-and-what-we-know/
+      https://www.bleepingcomputer.com/news/security/microsoft-shares-how-solarwinds-hackers-evaded-detection/
+
+
+   
