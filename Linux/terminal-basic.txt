@@ -135,3 +135,38 @@
                             PATH            -->     indica las rutas de donde estás los binarios que usa el sistema
                             BASH_VERSION    -->     versión del bash utilizado
                             SHELL           -->     dirección de la shell que se esta utilizando
+
+    Comandos de busqueda:
+                            $ which nombre_comando                                  --> imprime la ruta de los binarios
+
+                            $ find ~/ruta/busqueda -name nombre_file            --> imprime de las coincidencias con nombre_file
+                            $ find ~/ruta/busqueda -name nombre_file | less     --> aplica el comando less para visualizar mejor el archivo
+                            $ find ~/ruta/busqueda -type d -name nombre_dir     --> tipo d para directorios
+                            $ find ~/ruta/busqueda -type f -name *.log          --> tipo f para archivo ej: extensión .log
+                            $ find ~/ruta/busqueda -type l                      --> tipo l para enlaces simbolicos
+                            $ find ~/ruta/busqueda -size 20M                    --> imprime los archivos con tamaño igual a 20M
+                            $ find ~/ruta/busqueda -size +20M                   --> imprime los archivos con tamaño mayor a 20M
+                            $ find ~/ruta/busqueda -size -20M                   --> imprime los archivos con tamaño menor a 20M
+                            $ find ~/ruta/busqueda -type [d,f] -empty           --> imprime los archivos/directorios vacios                                                                                                                                                                                                                                                                                                                                                                                                     
+                            $ find ~/ruta/busqueda -type d -maxdepth 2          --> limita la busqueda a máximo 2 directorios de profundidad
+                            $ find ~/ruta/busqueda -type d -mindepth 2          --> permite saltar niveles a minimo 2 directorios de profundidad
+
+    
+    Comando grep
+                    realiza busquedas de texto dentro dentro de un archivo, utilizando regex (Regular Expression) para realizar su búsqueda
+                    Grep” significa Global Regular Expression Print. 
+
+                    $ grep [ExpresiónRegular] [archivoDondeBuscar]
+                    $ grep -i [ExpresiónRegular] [archivoDondeBuscar]                   --> -i ignora el case sensitive
+                    $ grep -c [ExpresiónRegular] [archivoDondeBuscar]                   --> -c cuenta las ocurrencias
+                    $ grep -v [ExpresiónRegular] [archivoDondeBuscar]                   --> -v excluye la expresión regular de la busqueda
+                    $ grep -m numero_lineas [ExpresiónRegular] [archivoDondeBuscar]     --> -m limita las lineas de busqueda
+                    
+    Comando word count
+                        permite contar palabras
+
+                        $ wc nombre_file            --> entrega cuatro elementos    numero_lineas, número_palabras, número_bits, nombre_file
+                                                    
+                                                    opciones:   -l lineas, -w palabras, -c bytes, -m caracteres
+
+                    
