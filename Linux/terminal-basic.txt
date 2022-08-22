@@ -71,15 +71,16 @@
     Operadores de control
                             permiten encadenar comandos:
         
-        ;       permite encadenar comandos en la misma linea que se ejecutaran de manera sincrónica
+        ;   permite encadenar comandos en la misma linea que se ejecutaran de manera sincrónica
 
-        &       permite encadenar comandos que se ejecutan de manera asincróna o de manera paralela, se ejecutan en segundo plano
+        &   permite encadenar comandos que se ejecutan de manera asincróna o de manera paralela, se ejecutan en segundo plano
 
-        &&      permite encadenar comandos de manera condicional, si se cumple el primero se ejecuta el siguiente...
-                condición AND
+        &&  permite encadenar comandos de manera condicional, si se cumple el primero se ejecuta el siguiente...
+            condición AND
 
-        ||      permite encadenar comandos de manera codiciona, si se cumple o no se cumple el primero  el siguiente siempre se ejecuta...
-                condición OR
+        ||  permite encadenar comandos de manera codicional, si se cumple o no se cumple el primero  el siguiente siempre se 
+            ejecuta...
+            condición OR
 
 
     Permisos
@@ -106,18 +107,19 @@
 
     Modificar permisos:     +   añade,  -   quita,  =   asigna
 
-                        $ chmod 755 file                rwxrw-rw-
-                        $ chmod u+rwx,go+w file         rwxrw-rw-
+                $ chmod 755 file                rwxrw-rw-
+                $ chmod u+rwx,go+w file         rwxrw-rw-
 
-                        $ chmod 644 file                rw-r--r--
-                        $ chmod u+rw-x,go+r-w+x file    rw-r--r--
-                        $ chmod u=rwx,go=r file         rw-r--r--
+                $ chmod 644 file                rw-r--r--
+                $ chmod u+rw-x,go+r-w+x file    rw-r--r--
+                $ chmod u=rwx,go=r file         rw-r--r--
 
     
     Cambiar de usuario: 
-                        $ whoami                    --> usuario actual
-                        $ su nombre_usuario         --> usuario actual a usuario a switchar ej: nombre_usuario
-                        $ sudo su                   --> usuario actual a usuarioi root
+                
+                $ whoami                    --> usuario actual
+                $ su nombre_usuario         --> usuario actual a usuario a switchar ej: nombre_usuario
+                $ sudo su                   --> usuario actual a usuarioi root
                         
     Cambiar password:
                         $ passdw nombre_usuario
@@ -137,36 +139,82 @@
                             SHELL           -->     dirección de la shell que se esta utilizando
 
     Comandos de busqueda:
-                            $ which nombre_comando                                  --> imprime la ruta de los binarios
+                        
+                $ which nombre_comando                                  --> imprime la ruta de los binarios
 
-                            $ find ~/ruta/busqueda -name nombre_file            --> imprime de las coincidencias con nombre_file
-                            $ find ~/ruta/busqueda -name nombre_file | less     --> aplica el comando less para visualizar mejor el archivo
-                            $ find ~/ruta/busqueda -type d -name nombre_dir     --> tipo d para directorios
-                            $ find ~/ruta/busqueda -type f -name *.log          --> tipo f para archivo ej: extensión .log
-                            $ find ~/ruta/busqueda -type l                      --> tipo l para enlaces simbolicos
-                            $ find ~/ruta/busqueda -size 20M                    --> imprime los archivos con tamaño igual a 20M
-                            $ find ~/ruta/busqueda -size +20M                   --> imprime los archivos con tamaño mayor a 20M
-                            $ find ~/ruta/busqueda -size -20M                   --> imprime los archivos con tamaño menor a 20M
-                            $ find ~/ruta/busqueda -type [d,f] -empty           --> imprime los archivos/directorios vacios                                                                                                                                                                                                                                                                                                                                                                                                     
-                            $ find ~/ruta/busqueda -type d -maxdepth 2          --> limita la busqueda a máximo 2 directorios de profundidad
-                            $ find ~/ruta/busqueda -type d -mindepth 2          --> permite saltar niveles a minimo 2 directorios de profundidad
+                $ find ~/ruta/busqueda -name nombre_file            --> imprime de las coincidencias con nombre_file
+                $ find ~/ruta/busqueda -name nombre_file | less     --> aplica el comando less para visualizar mejor el archivo
+                $ find ~/ruta/busqueda -type d -name nombre_dir     --> tipo d para directorios
+                $ find ~/ruta/busqueda -type f -name *.log          --> tipo f para archivo ej: extensión .log
+                $ find ~/ruta/busqueda -type l                      --> tipo l para enlaces simbolicos
+                $ find ~/ruta/busqueda -size 20M                    --> imprime los archivos con tamaño igual a 20M
+                $ find ~/ruta/busqueda -size +20M                   --> imprime los archivos con tamaño mayor a 20M
+                $ find ~/ruta/busqueda -size -20M                   --> imprime los archivos con tamaño menor a 20M
+                $ find ~/ruta/busqueda -type [d,f] -empty           --> imprime los archivos/directorios vacios                                                                                                                                                                                                                                                                                                                                                                                                     
+                $ find ~/ruta/busqueda -type d -maxdepth 2          --> limita la busqueda a máximo 2 directorios de profundidad
+                $ find ~/ruta/busqueda -type d -mindepth 2          --> permite saltar niveles a minimo 2 directorios de 
+                                                                        profundidad
 
     
     Comando grep
-                    realiza busquedas de texto dentro dentro de un archivo, utilizando regex (Regular Expression) para realizar su búsqueda
-                    Grep” significa Global Regular Expression Print. 
+                    realiza busquedas de texto dentro dentro de un archivo, utilizando regex (Regular Expression) para realizar 
+                    su búsqueda. Grep” significa Global Regular Expression Print. 
 
-                    $ grep [ExpresiónRegular] [archivoDondeBuscar]
-                    $ grep -i [ExpresiónRegular] [archivoDondeBuscar]                   --> -i ignora el case sensitive
-                    $ grep -c [ExpresiónRegular] [archivoDondeBuscar]                   --> -c cuenta las ocurrencias
-                    $ grep -v [ExpresiónRegular] [archivoDondeBuscar]                   --> -v excluye la expresión regular de la busqueda
-                    $ grep -m numero_lineas [ExpresiónRegular] [archivoDondeBuscar]     --> -m limita las lineas de busqueda
+                $ grep [ExpresiónRegular] [archivoDondeBuscar]
+                $ grep -i [ExpresiónRegular] [archivoDondeBuscar]                   --> -i ignora el case sensitive
+                $ grep -c [ExpresiónRegular] [archivoDondeBuscar]                   --> -c cuenta las ocurrencias
+                $ grep -v [ExpresiónRegular] [archivoDondeBuscar]                   --> -v excluye la expresión regular de la busqueda
+                $ grep -m numero_lineas [ExpresiónRegular] [archivoDondeBuscar]     --> -m limita las lineas de busqueda
                     
     Comando word count
-                        permite contar palabras
 
-                        $ wc nombre_file            --> entrega cuatro elementos    numero_lineas, número_palabras, número_bits, nombre_file
+                permite contar palabras
+
+                $ wc nombre_file        --> entrega cuatro elementos    
+                                            numero_lineas, número_palabras, número_bits, nombre_file
                                                     
-                                                    opciones:   -l lineas, -w palabras, -c bytes, -m caracteres
+                                            opciones:   -l lineas, -w palabras, -c bytes, -m caracteres
 
-                    
+    Compresión:
+                $ tar [opciones] [nombre_archivo_comprimido][archivo_a_comprimir/directorio_a_comprimir]
+
+                $ tar -cvf comprimido.tar misArchivos/          -c -> compresión .tar
+                                                                -v -> verboso
+                                                                -f -> archivos
+                                
+                $ tar -czvf comprimido.tar.gz misArchivos/      -z -> compresión .tar.gz o .tgz
+
+                $ zip [opciones] [nombre_archivo_comprimido] [archivo_a_comprimir/directorio_a_comprimir]
+
+                $ zip -r comprimido.zip misArchivos/
+
+    
+    Descompresión:
+
+                $ tar [opciones] [nombre_archivo_comprimido]
+                
+                $ tar -xvf comprimido.tar       -x -> descompresión .tar
+
+                $ tar -xzvf comprimir.tar.gz    -z -> descompresión .tar.gz o .tgz
+                
+                $ unzip [opciones] [nombre_archivo_comprimido]
+
+                $ unzip comprimido.zip
+
+    
+    Manejo de procesos:
+
+                $ ps                    --> muestra los procesos que se ejecutan en 4 columnas, PID, TTY, TIME, CMD
+                                        --> PID es el process ID
+                                        --> TTY teletypewrite o teletipo, que es un dispositivo físco o virtual que permite
+                                                interactuar con el sistema a nivel del kernel
+                                        --> TIME medida de tiempo
+                                        --> CMD nombre del proceso
+                
+                $ top                   --> muestra una interfaz con los procesos que se estan ejecutando más los recurso
+                                            que consumen información adicional
+
+                $ kill numero_PID       --> mata el proceso
+
+                $ htop
+                $ glandes
