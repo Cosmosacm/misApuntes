@@ -65,3 +65,10 @@ Averiguar IP pública externa
 
 C:\> nslookup myip.opendns.com resolver1.opendns.com
 
+
+
+
+C:\WINDOWS\system32>sfc /VERIFYONLY
+
+
+C:\Windows>sfc /SCANNOW
