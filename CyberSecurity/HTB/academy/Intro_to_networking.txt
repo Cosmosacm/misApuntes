@@ -1,14 +1,14 @@
-	Introduction to Networking
+
+========================= Introduction to Networking =========================
 
 
-
-WAN -> protocolo BGP -> internet
-
-
-LAN/WLAN -> RFC 1918, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 -> internal network (home or office)
+WAN	-> protocolo BGP -> internet
 
 
-VPN -> Virtual Private Networks -> conecta múltiples sitios de una red a una LAN
+LAN/WLAN	-> RFC 1918, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 -> internal network (home or office)
+
+
+VPN	-> Virtual Private Networks -> conecta múltiples sitios de una red a una LAN
 
 	* site-to-site VPN -> unen redes a través de internet, permitiendo una comunicación como si fuera local
 	
@@ -18,32 +18,120 @@ VPN -> Virtual Private Networks -> conecta múltiples sitios de una red a una LA
 	* SSL VPN -> VPN que se realiza dentro del navegador web ej: HackTheBox Pwnbox
 
 
-GAN -> Global Area Network
+GAN		-> Global Area Network
 
-MAN -> Metropolitan Area Network -> conexión de varias LAN de proximidad geografíca en un area metropolitana
+MAN 	-> Metropolitan Area Network -> conexión de varias LAN de proximidad geografíca en un area metropolitana
 
-PAN -> Personal Area Network -> conexión de dispositivos finales modernos para compartir datos
+PAN 	-> Personal Area Network -> conexión de dispositivos finales modernos para compartir datos
 
-WPAN -> Wireless Personal Area Network -> basada en tecnología bluetooth o wireless USB
+WPAN 	-> Wireless Personal Area Network -> basada en tecnología bluetooth o wireless USB
 	
-	Piconet -> bluetooth
+			Piconet -> bluetooth
 	
-	IoT -> se utiliza WPAM con velocidades de datos bajas para control y monitoreo. Protocolos Insteon, Z-wave y ZigBee para smart homes y domotica	
+			IoT 	-> se utiliza WPAM con velocidades de datos bajas para control y monitoreo. Protocolos Insteon, Z-wave y ZigBee para smart homes y domotica	
 
 
-	Networking Topoligies
+----------	Networking Topoligies ----------
 
-Una topología de red es una disposición típica y una conexión física o lógica de dispositivos en una red.
+	Una topología de red es una disposición típica y una conexión física o lógica de dispositivos en una red.
 
+	Computer -> host ->
+						clientes (clients)
+						servidores (servers)	
 
-1. Conexiones (medio): cable par-trensado, cable coaxial, fibra optica, otros (radio enlaces)
+	Network components	->	ditribuyen y aseguran que los host puedan establecer conexiones lógicas entre ellos.
 
-2. Nodes - Network Interface Controller (NIC): Los nodos de red son los puntos de conexión del medio de transmisión a los transmisores y receptores
+						switches
+						bridges
+						routers
 
+1. Conexiones (medio): 
+						cable par-trensado
+						cable coaxial
+						fibra optica, 
+						radio enlaces
+
+2. Nodes - Network Interface Controller (NIC): 
+												Los nodos de red son los puntos de conexión del medio de transmisión a los transmisores y receptores
 
 	Repeaters		Hubs		Bridges		Switches
 	
-	Router/Modem	Gateways	Firewalls		switch capa 2
+	Router/Modem	Gateways	Firewalls	switch capa 2
 
 
 3. Clasificación: 
+					Las topologías pueden físicas o lógicas:
+
+																Point to point 	->	conexión dedicada, ej: conexión entre dos telefonos
+																bus				->	sin un componente central de red que controle los proceso
+																					medio compartido, solo un host puede envía, mientras todos los otros pueden recibir y evaluar
+																					ej de medio: el cable coaxial 
+																star			->	un componente de red mantiene la conexión con todos los host, y manejan la función de reenvio
+																					de los paquetes de datos. Su tráfico de datos suele ser alto.
+																ring			->	cada host o nodo se conecta al anillo con dos cables, uno de entrada de datos y otro de salida
+																					de datos, la información se transmite en una sola dirección, por lo que cada host accede de
+																					manera secuencial utilizando un token. 
+																mesh			->	no tienen una topología fija, y los nodos deciden las conexiones a nivel físico y el enrutamiento
+																					a nivel lógico, y se divide en full mesh y partial mesh
+																					en full mesh cada host está entrelazado con los otros host por medio de nodos, técnica usada en 
+																					redes WAN y MAN. 
+																tree			->	es una topología star extendida, útil para combinar varias topologías
+																hybrid			->	combinan dos o más topologías de redes básicas
+																daisy chain		->	varios host se conectan colocando un cable de un nodo a otro, estebleciendo una conexión en serie,
+																					se encuentra en a menudo en la tecnología de automaticación CAN
+
+PROXY
+		es un dispositivo o servicio que se encuentra en medio de una conexión y actua como mediador, por tanto debe poder inspeccionar el contenido del tráfico, operan casi siempre
+		en la capa de aplicación. Todos los proxys actúan de forma transparente o no transparente.
+									HTTP Proxy			->	BurpSuite, ZAProxy
+									SOCKS/SSH Proxy		->	Chisel, ptunnel, sshuttle
+
+
+		Dedicated Proy / Forward Proxy	->	estan siempre del lado del cliente y diseñado para filtrar las solicitudes salientes, es cuando un cliente realiza una solicitud a un host y 
+											el host lleva a cabo la solicitud, 
+		Reverse Proxy					->	esta del lado del servidor, y esta diseñado para filtrar las solcitudes entrantes
+		Transparent Proxy				->	el cliente no conoce su existencia, intercepa las solicitudes del cliente hacia internet y actúa como una instancia sustituta
+	
+
+---------- Networkin Model ----------
+
+OSI Model (Open System Interconection)
+
+		tiene 7 capas individuales, cada una con sus respectivas funciones, es un modelo de referencia utilizado para describir y definir la comunicación
+		entre sistemas.
+
+		7 capa de aplicación		->	HTTP, FTP			->	controla la entrada y salida de datos y proporciona las funciones de la aplicación
+		6 capa de presentacion		->	JPG, PNG, SSL, TLS	->	transfiere la presentación de los datos dependiente del sistema a una forma independiente de la aplicación
+		5 capa de sesión			->	NetBIOS				->	controla la conexión lógica entre dos sistemas y previene por ej fallas de conexión u otros problemas
+		------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ orientadas a la aplicación
+		4 capa de transporte		->	TCP, UDP			->	controla la tranferencia de los datos de extremo a extremo, puede detectar y evitar congestión y segmentar flujos de datos 
+		3 capa de rede				->	Router, L3 Switch	->	las conexiones se establecen en redes de comuntación de circuitos y los paquetes de datos se reenvían redes de comutación de paquetes
+		2 capa de enlace de datos	->	Switch, bridges		->	permite transmisiones confiables y sin errores en el medio respectivo, dividendo los flujos de bit en bloques o tramas
+		------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ orientadas al transporte
+		1 capa física				->	network card		->	la transmisión se realiza por medios alámbricos o inalámbricos, utilizando señales eléctricas, señales ópticas u electromagnéticas
+
+
+TCP/IP (Transmision Control Protocol / Internet Protocol)
+		
+		es un termino generico para muchos protocolos de red, internet está basado enteramente en la familia de protocolos TCP/IP
+
+		4 capa de aplicación	->	Data				->	define los protocolos que utilizan las aplicaciones para intercambiar datos, y permite que las aplicaciones accedan a los servicios de otras capas
+		3 capa de transporte	->	Segment/Datagram	->	es la responsable de proporcionar servicios de sesión TCP y datagramas UDP para la capa de aplicación
+		2 capa de rede			->	Packet				->	tiene las funciones de direccionamiento, empaquetado y enrutamiento del host
+		1 capa de enlace		->	Frame, Bit			->	es responsable de colocar los paquetes en el medio y de recibir los paquetes correspondientes del medio, funciona independientemente del método de	
+															acceso a la red, el formato de la trama y el medio
+
+		
+		IP asegura que el paquete de datos llegue a su destino y TCP controla la transferencia de datos y asegura la conexión entre el flujo de datos y la aplicación	
+
+		direccionamiento lógico		->	IP
+		enrutamiento				->	IP		->	el siguiente nodo se determina en cada nodo en el camino hacia su destino
+		error y control de flujo	->	TCP		->	se envían mensajes de control continuamente para verificar si la conexión aún está establecida
+		soporte de aplicaciones		->	TCP		->	los puertos TCP y UDP forman una abstracción de software para distinguir aplicaciones especificas y enlaces de comuncación
+		resolución de nombres		->	DNS		->	proporciona resolución de nombres a través de dominios totalmente calificados (FQDN) a direcciones IP, para llegar a un host deseado con el nombre especifico en internet
+
+PDU (Protocol Data Unit)	->	los dispositivos en una capa intercambian datos en un formato llamado unidad de datos del protocolo, en la transmision cada capa en orden descendente, agrega un 
+								encabezado a la PDU desde la capa superior, hasta la inferior, para controlar e identificar el paquete, luego en la recepción se hace el proceso contrario,
+								se desempaquetan los datos en cada capa con la información del encabezado.
+
+								
