@@ -26,20 +26,21 @@ PAN 	-> Personal Area Network -> conexión de dispositivos finales modernos para
 
 WPAN 	-> Wireless Personal Area Network -> basada en tecnología bluetooth o wireless USB
 	
-			Piconet -> bluetooth
+			Piconet ->	bluetooth
 	
-			IoT 	-> se utiliza WPAM con velocidades de datos bajas para control y monitoreo. Protocolos Insteon, Z-wave y ZigBee para smart homes y domotica	
+			IoT 	->	se utiliza WPAM con velocidades de datos bajas para control y monitoreo. Protocolos Insteon, Z-wave y ZigBee para smart 
+						homes y domotica	
 
 
 ----------	Networking Topoligies ----------
 
-	Una topología de red es una disposición típica y una conexión física o lógica de dispositivos en una red.
+Una topología de red es una disposición típica y una conexión física o lógica de dispositivos en una red.
 
-	Computer -> host ->
-						clientes (clients)
-						servidores (servers)	
+Computer -> host ->
+					clientes (clients)
+					servidores (servers)	
 
-	Network components	->	ditribuyen y aseguran que los host puedan establecer conexiones lógicas entre ellos.
+Network components	->	ditribuyen y aseguran que los host puedan establecer conexiones lógicas entre ellos.
 
 						switches
 						bridges
@@ -52,7 +53,8 @@ WPAN 	-> Wireless Personal Area Network -> basada en tecnología bluetooth o wir
 						radio enlaces
 
 2. Nodes - Network Interface Controller (NIC): 
-												Los nodos de red son los puntos de conexión del medio de transmisión a los transmisores y receptores
+												Los nodos de red son los puntos de conexión del medio de transmisión a los transmisores y 
+												receptores
 
 	Repeaters		Hubs		Bridges		Switches
 	
@@ -60,78 +62,319 @@ WPAN 	-> Wireless Personal Area Network -> basada en tecnología bluetooth o wir
 
 
 3. Clasificación: 
-					Las topologías pueden físicas o lógicas:
+				
+		Las topologías pueden físicas o lógicas:
 
-																Point to point 	->	conexión dedicada, ej: conexión entre dos telefonos
-																bus				->	sin un componente central de red que controle los proceso
-																					medio compartido, solo un host puede envía, mientras todos los otros pueden recibir y evaluar
-																					ej de medio: el cable coaxial 
-																star			->	un componente de red mantiene la conexión con todos los host, y manejan la función de reenvio
-																					de los paquetes de datos. Su tráfico de datos suele ser alto.
-																ring			->	cada host o nodo se conecta al anillo con dos cables, uno de entrada de datos y otro de salida
-																					de datos, la información se transmite en una sola dirección, por lo que cada host accede de
-																					manera secuencial utilizando un token. 
-																mesh			->	no tienen una topología fija, y los nodos deciden las conexiones a nivel físico y el enrutamiento
-																					a nivel lógico, y se divide en full mesh y partial mesh
-																					en full mesh cada host está entrelazado con los otros host por medio de nodos, técnica usada en 
-																					redes WAN y MAN. 
-																tree			->	es una topología star extendida, útil para combinar varias topologías
-																hybrid			->	combinan dos o más topologías de redes básicas
-																daisy chain		->	varios host se conectan colocando un cable de un nodo a otro, estebleciendo una conexión en serie,
-																					se encuentra en a menudo en la tecnología de automaticación CAN
+			Point to point 	->	conexión dedicada, ej: conexión entre dos telefonos
+			bus				->	sin un componente central de red que controle los proceso
+								medio compartido, solo un host puede envía, mientras todos los otros pueden recibir y evaluar
+								ej de medio: el cable coaxial 
+			star			->	un componente de red mantiene la conexión con todos los host, y manejan la función de reenvio
+								de los paquetes de datos. Su tráfico de datos suele ser alto.
+			ring			->	cada host o nodo se conecta al anillo con dos cables, uno de entrada de datos y otro de salida
+								de datos, la información se transmite en una sola dirección, por lo que cada host accede de
+								manera secuencial utilizando un token. 
+			mesh			->	no tienen una topología fija, y los nodos deciden las conexiones a nivel físico y el enrutamiento
+								a nivel lógico, y se divide en full mesh y partial mesh
+								en full mesh cada host está entrelazado con los otros host por medio de nodos, técnica usada en 
+								redes WAN y MAN. 
+			tree			->	es una topología star extendida, útil para combinar varias topologías
+			hybrid			->	combinan dos o más topologías de redes básicas
+			daisy chain		->	varios host se conectan colocando un cable de un nodo a otro, estebleciendo una conexión en serie,
+								se encuentra en a menudo en la tecnología de automaticación CAN
 
 PROXY
-		es un dispositivo o servicio que se encuentra en medio de una conexión y actua como mediador, por tanto debe poder inspeccionar el contenido del tráfico, operan casi siempre
-		en la capa de aplicación. Todos los proxys actúan de forma transparente o no transparente.
-									HTTP Proxy			->	BurpSuite, ZAProxy
-									SOCKS/SSH Proxy		->	Chisel, ptunnel, sshuttle
+		es un dispositivo o servicio que se encuentra en medio de una conexión y actua como mediador, por tanto debe poder inspeccionar el 
+		contenido del tráfico, operan casi siempre en la capa de aplicación. Todos los proxys actúan de forma transparente o no transparente.
+							
+			HTTP Proxy			->	BurpSuite, ZAProxy
+			SOCKS/SSH Proxy		->	Chisel, ptunnel, sshuttle
 
 
-		Dedicated Proy / Forward Proxy	->	estan siempre del lado del cliente y diseñado para filtrar las solicitudes salientes, es cuando un cliente realiza una solicitud a un host y 
-											el host lleva a cabo la solicitud, 
+		Dedicated Proy / Forward Proxy	->	estan siempre del lado del cliente y diseñado para filtrar las solicitudes salientes, es cuando un 
+											cliente realiza una solicitud a un host y el host lleva a cabo la solicitud 
 		Reverse Proxy					->	esta del lado del servidor, y esta diseñado para filtrar las solcitudes entrantes
-		Transparent Proxy				->	el cliente no conoce su existencia, intercepa las solicitudes del cliente hacia internet y actúa como una instancia sustituta
+		Transparent Proxy				->	el cliente no conoce su existencia, intercepa las solicitudes del cliente hacia internet y actúa como
+											una instancia sustituta
 	
 
 ---------- Networkin Model ----------
 
 OSI Model (Open System Interconection)
 
-		tiene 7 capas individuales, cada una con sus respectivas funciones, es un modelo de referencia utilizado para describir y definir la comunicación
-		entre sistemas.
+		tiene 7 capas individuales, cada una con sus respectivas funciones, es un modelo de referencia utilizado para describir y definir la 
+		comunicación entre sistemas.
 
 		7 capa de aplicación		->	HTTP, FTP			->	controla la entrada y salida de datos y proporciona las funciones de la aplicación
-		6 capa de presentacion		->	JPG, PNG, SSL, TLS	->	transfiere la presentación de los datos dependiente del sistema a una forma independiente de la aplicación
-		5 capa de sesión			->	NetBIOS				->	controla la conexión lógica entre dos sistemas y previene por ej fallas de conexión u otros problemas
+		6 capa de presentacion		->	JPG, PNG, SSL, TLS	->	transfiere la presentación de los datos dependiente del sistema a una forma 
+																independiente de la aplicación
+		5 capa de sesión			->	NetBIOS				->	controla la conexión lógica entre dos sistemas y previene por ej fallas de 
+																conexión u otros problemas
 		------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ orientadas a la aplicación
-		4 capa de transporte		->	TCP, UDP			->	controla la tranferencia de los datos de extremo a extremo, puede detectar y evitar congestión y segmentar flujos de datos 
-		3 capa de rede				->	Router, L3 Switch	->	las conexiones se establecen en redes de comuntación de circuitos y los paquetes de datos se reenvían redes de comutación de paquetes
-		2 capa de enlace de datos	->	Switch, bridges		->	permite transmisiones confiables y sin errores en el medio respectivo, dividendo los flujos de bit en bloques o tramas
+		4 capa de transporte		->	TCP, UDP			->	controla la tranferencia de los datos de extremo a extremo, puede detectar y 
+																evitar congestión y segmentar flujos de datos 
+		3 capa de rede				->	Router, L3 Switch	->	las conexiones se establecen en redes de comuntación de circuitos y los paquetes
+																de datos se reenvían redes de comutación de paquetes
+		2 capa de enlace de datos	->	Switch, bridges		->	permite transmisiones confiables y sin errores en el medio respectivo, dividendo
+																los flujos de bit en bloques o tramas
 		------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ orientadas al transporte
-		1 capa física				->	network card		->	la transmisión se realiza por medios alámbricos o inalámbricos, utilizando señales eléctricas, señales ópticas u electromagnéticas
+		1 capa física				->	network card		->	la transmisión se realiza por medios alámbricos o inalámbricos, utilizando señales 
+																eléctricas, señales ópticas u electromagnéticas
 
 
 TCP/IP (Transmision Control Protocol / Internet Protocol)
 		
 		es un termino generico para muchos protocolos de red, internet está basado enteramente en la familia de protocolos TCP/IP
 
-		4 capa de aplicación	->	Data				->	define los protocolos que utilizan las aplicaciones para intercambiar datos, y permite que las aplicaciones accedan a los servicios de otras capas
-		3 capa de transporte	->	Segment/Datagram	->	es la responsable de proporcionar servicios de sesión TCP y datagramas UDP para la capa de aplicación
+		4 capa de aplicación	->	Data				->	define los protocolos que utilizan las aplicaciones para intercambiar datos, y permite
+															que las aplicaciones accedan a los servicios de otras capas
+		3 capa de transporte	->	Segment/Datagram	->	es la responsable de proporcionar servicios de sesión TCP y datagramas UDP para la capa
+															de aplicación
 		2 capa de rede			->	Packet				->	tiene las funciones de direccionamiento, empaquetado y enrutamiento del host
-		1 capa de enlace		->	Frame, Bit			->	es responsable de colocar los paquetes en el medio y de recibir los paquetes correspondientes del medio, funciona independientemente del método de	
-															acceso a la red, el formato de la trama y el medio
+		1 capa de enlace		->	Frame, Bit			->	es responsable de colocar los paquetes en el medio y de recibir los paquetes 
+															correspondientes del medio, funciona independientemente del método de acceso a la red,
+															el formato de la trama y el medio
 
 		
-		IP asegura que el paquete de datos llegue a su destino y TCP controla la transferencia de datos y asegura la conexión entre el flujo de datos y la aplicación	
+		IP asegura que el paquete de datos llegue a su destino y TCP controla la transferencia de datos y asegura la conexión entre el flujo de
+		datos y la aplicación	
 
 		direccionamiento lógico		->	IP
 		enrutamiento				->	IP		->	el siguiente nodo se determina en cada nodo en el camino hacia su destino
 		error y control de flujo	->	TCP		->	se envían mensajes de control continuamente para verificar si la conexión aún está establecida
-		soporte de aplicaciones		->	TCP		->	los puertos TCP y UDP forman una abstracción de software para distinguir aplicaciones especificas y enlaces de comuncación
-		resolución de nombres		->	DNS		->	proporciona resolución de nombres a través de dominios totalmente calificados (FQDN) a direcciones IP, para llegar a un host deseado con el nombre especifico en internet
+		soporte de aplicaciones		->	TCP		->	los puertos TCP y UDP forman una abstracción de software para distinguir aplicaciones 
+													especificas y enlaces de comuncación
+		resolución de nombres		->	DNS		->	proporciona resolución de nombres a través de dominios totalmente calificados (FQDN) a
+													direcciones IP, para llegar a un host deseado con el nombre especifico en internet
 
-PDU (Protocol Data Unit)	->	los dispositivos en una capa intercambian datos en un formato llamado unidad de datos del protocolo, en la transmision cada capa en orden descendente, agrega un 
-								encabezado a la PDU desde la capa superior, hasta la inferior, para controlar e identificar el paquete, luego en la recepción se hace el proceso contrario,
-								se desempaquetan los datos en cada capa con la información del encabezado.
+PDU (Protocol Data Unit)	->	los dispositivos en una capa intercambian datos en un formato llamado unidad de datos del protocolo, en la
+								transmision cada capa en orden descendente, agrega un encabezado a la PDU desde la capa superior, hasta la
+								inferior, para controlar e identificar el paquete, luego en la recepción se hace el proceso contrario, se 
+								desempaquetan los datos en cada capa con la información del encabezado.
 
 								
+---------- Networkin Layer ----------
+
+La capa de red o capa 3 controla el intercambio de paquetes de datos, los cuales estan provistos de nodos de enrutamiento, para transferirse
+nodo a nodo hasta llegar a su destino; en resumen realiza las funciones de direccionamiento lógico y enrutamiento
+
+	Protocolos más usados:
+		IPv4 / IPv6
+    	IPsec
+    	ICMP
+    	IGMP
+    	RIP
+    	OSPF
+
+
+---------- IP Addresses ----------
+
+Cada host en una red localizada puede ser identificado por su dirección MAC (Media Access Control - control de acceso al medio).
+Pero si un host se encuentra en otra red, no es suficiente con conocer la dirección MAC para establecer una comunicación
+
+El direccionamiento se realiza a través de la dirección IPv4 y/o IPv6, compuesto por  ->	Dirección de red
+																							Dirección de host
+
+	IPv4 / IPv6		->	describen la dirección postal única y el distrito del edificio del receptores
+
+	MAC				->	describe el piso y el apartamento exacto del receptor
+
+
+	Una IP puede dirigirse a varios repectores		->	broadcasting
+
+	Un dispositivo puede responder a múltiples IP	->	Si y solo si, cada dirección IP se asigna solo una vez dentro de la red
+
+
+	IPv4
+		conformado por cuatro grupos de 8 bits (octetos) separador por un punto, en total 32 bits. Cada octeto en su equivalente decimal va
+		de 0 - 255, ej: 
+						01111111.00000000.00000001.11111111
+						127.0.1.255
+
+
+		Class 	Network Address 	First Address 	Last Address 		Subnetmask 		CIDR 		Subnets 	IPs
+		A 		1.0.0.0 			1.0.0.1 		127.255.255.255 	255.0.0.0 		/8 			127 		16,777,214 + 2
+		B 		128.0.0.0 			128.0.0.1 		191.255.255.255 	255.255.0.0 	/16 		16,384 		65,534 + 2
+		C 		192.0.0.0 			192.0.0.1 		223.255.255.255 	255.255.255.0 	/24 		2,097,152 	254 + 2
+		D 		224.0.0.0 			224.0.0.1 		239.255.255.255 	Multicast 		Multicast 	Multicast 	Multicast
+		E 		240.0.0.0 			240.0.0.1 		255.255.255.255 	reserved 		reserved 	reserved 	reserved
+
+
+---------- Subnet Mask ----------
+
+La división de redes de clases o cualquier red, en redes más pequeñas, se realiza utilizando subnetting; y la división se realiza mediante
+la máscara de red, que define que parte de la dirección IP actua como parte de red o parte de host.
+
+
+---------- Network and Gateway Addresses ----------
+
+En una red siempre se reservan la primera y la ultima dirección IP, correspondientes a dirección de red (network address) y la dirección
+de difución (broadcast address) respectivamente. 
+
+	default gateway	->	puerta de la enlace es el nombre de la dirección IPv4 del router que acopla redes y sistemas; por lo general se le
+						asigna la primera o la ultima dirección IPv4 de una subred, no es un requisito técnico.  
+
+
+---------- Broadcast Address ----------
+
+La tarea de la dirección IP de difusión es conectar todos los dispositivos de una red entre sí; es un mensaje que se transmite a todos y no
+requiere ninguna respuesta.
+
+
+---------- CIDR ----------
+
+El enrutamiento entre dominios sin clase (Classless Inter-Domain Routing - CIDR) es un método de representación y sustituye la asignación 
+fija entre las direcciones IPv4 de las clases de red.
+
+La división se basa en la subnet mask o en el sufijo CIDR:
+															IPv4 address:	192.168.10.30
+															subnet mask:	255.255.255.0
+															CIDR:			192.168.10.30/24
+
+
+---------- Subnetting ----------
+
+Es la división de un rango de direcciones IPv4 en varios rangos de direcciones más pequeños.
+
+Una subred es un segmento lógico de una red que utiliza direcciones IP con la misma dirección de red.
+
+    Network address
+    Broadcast address
+    First host
+    Last host
+    Number of hosts
+
+	
+	ej:		IPv4 Address:	192.168.12.160
+    		Subnet Mask: 	255.255.255.192
+    		CIDR: 			192.168.12.160/26
+
+
+			Separation Of Network & Host Parts	->	la mascara define hasta que punto se mantendra fija la parte de red
+			
+			Details of 		1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			IPv4 			1100 0000 	1010 1000 	0000 1100 	10|100000 	192.168.12.160/26
+			Subnet mask 	1111 1111 	1111 1111 	1111 1111 	11|000000 	255.255.255.192
+							--------------------------------------|-------
+							network parte						  | host part
+
+
+			total de host =	32 (total bits) - 26 (CIDR) = 6 bits	->	2^6 - 2 = 62 host
+
+
+			network address		->	todos los bits de la parte de host en 0		->	192.168.12.128/26
+
+			Details of 		1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			IPv4 			1100 0000 	1010 1000 	0000 1100 	10|000000 	192.168.12.128/26
+			Subnet mask 	1111 1111 	1111 1111 	1111 1111 	11|000000 	255.255.255.192
+
+
+			broadcast address	->	todos los bits de la parte de host en 1		->	92.168.12.191/26
+
+			Details of 		1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			IPv4 			1100 0000 	1010 1000 	0000 1100 	10|111111 	192.168.12.191/26
+			Subnet mask 	1111 1111 	1111 1111 	1111 1111 	11|000000 	255.255.255.192
+
+
+			Network address		192.168.12.128
+    		First host			192.168.12.129
+			Other host			...
+			Last host			192.168.12.190
+			Broadcast address	192.168.12.191
+			Number of hosts		62
+
+
+---------- Subnetting Into Smaller Networks	----------
+
+Es fundamental tener en cuenta que solo podemos dividir las subredes basandonos en el sistema binario.
+
+
+
+
+	ej:	dividir la subred en 4 subredes
+
+    	Subnet: 192.168.12.128/26
+    	Required Subnets: 4
+
+		1.	conocemos el total de host igual a 64 host, los dividimos en 4 subredes
+				
+				hosts		subnets			rango de host para cada subred
+				64		/	4 			= 	16
+
+		2.	4 es igual a 2^2	->	ahora se amplia la red en 2 bits	->	/26 a /28
+
+			Details of 		1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			IPv4 			1100 0000 	1010 1000 	0000 1100 	1000|0000 	192.168.12.128/28
+			Subnet mask 	1111 1111 	1111 1111 	1111 1111 	1111|0000 	255.255.255.240
+							----------------------------------------|----
+							network part							| host part
+		
+		3.	
+			subnet 1:
+			Details of 			1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			network address 	1100 0000 	1010 1000 	0000 1100 	1000|0000 	192.168.12.128/28
+			broadcast address	1100 0000 	1010 1000 	0000 1100 	1000|1111 	192.168.12.143/28
+			Subnet mask 		1111 1111 	1111 1111 	1111 1111 	1111|0000 	255.255.255.240
+
+			subnet 2:
+			Details of 			1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			network address 	1100 0000 	1010 1000 	0000 1100 	1001|0000 	192.168.12.144/28
+			broadcast address	1100 0000 	1010 1000 	0000 1100 	1001|1111 	192.168.12.159/28
+			Subnet mask 		1111 1111 	1111 1111 	1111 1111 	1111|0000 	255.255.255.240
+
+			subnet 3:
+			Details of 			1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			network address 	1100 0000 	1010 1000 	0000 1100 	1010|0000 	192.168.12.160/28
+			broadcast address	1100 0000 	1010 1000 	0000 1100 	1010|1111 	192.168.12.175/28
+			Subnet mask 		1111 1111 	1111 1111 	1111 1111 	1111|0000 	255.255.255.240
+
+			subnet 4:
+			Details of 			1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			network address 	1100 0000 	1010 1000 	0000 1100 	1011|0000 	192.168.12.176/28
+			broadcast address	1100 0000 	1010 1000 	0000 1100 	1011|1111 	192.168.12.191/28
+			Subnet mask 		1111 1111 	1111 1111 	1111 1111 	1111|0000 	255.255.255.240
+
+
+			Subnet No.	Network Address 	First Host 		Last Host 		Broadcast Address 	CIDR
+			
+			1 			192.168.12.128 		192.168.12.129 	192.168.12.142 	192.168.12.143		192.168.12.128/28
+			2 			192.168.12.144 		192.168.12.145 	192.168.12.158 	192.168.12.159		192.168.12.144/28
+			3 			192.168.12.160 		192.168.12.161 	192.168.12.174 	192.168.12.175		192.168.12.160/28
+			4 			192.168.12.176 		192.168.12.177 	192.168.12.190 	192.168.12.191		192.168.12.176/28
+
+
+	ej: 
+		CIDR: 10.200.20.0/27
+
+			Details of 		1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+			IPv4 			0000 1010 	1100 1000 	0001 0100 	000|00000 	10.200.20.0/27
+			Subnet mask 	1111 1111 	1111 1111 	1111 1111 	111|00000 	255.255.255.224
+							---------------------------------------|-------
+							network parte						   | host part
+
+			Network address		10.200.20.0
+    		First host			10.200.20.1
+			Other host			...
+			Last host			10.200.20.30
+			Broadcast address	10.200.20.31
+			Number of hosts		2^5-2=30
+
+    		Subnet: 10.200.20.0/27
+    		Required Subnets: 4
+
+			1.	32/4 = 8
+			2.	8 -> 2^3	
+
+					Details of 		1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	Decimal
+					IPv4 			0000 1010 	1100 1000 	0001 0100 	00000|000 	10.200.20.0/29
+					Subnet mask 	1111 1111 	1111 1111 	1111 1111 	11111|000 	255.255.255.29
+							----------------------------------------|----
+							network part							| host part
+		
+
+					Subnet No.	Network Address 	First Host 		Last Host 		Broadcast Address 	CIDR
+					
+					1 			10.200.20.0 		10.200.20.1 	10.200.20.6 	10.200.20.7			10.200.20.0/29
+					2 			10.200.20.8 		10.200.20.9	 	10.200.20.14 	10.200.20.15		10.200.20.8/29
+					3 			10.200.20.16 		10.200.20.17 	10.200.20.22 	10.200.20.23		10.200.20.16/29
+					4 			10.200.20.24 		10.200.20.25 	10.200.20.30 	10.200.20.31		10.200.20.24/29

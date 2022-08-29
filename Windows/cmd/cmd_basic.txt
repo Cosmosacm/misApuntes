@@ -72,3 +72,6 @@ C:\WINDOWS\system32>sfc /VERIFYONLY
 
 
 C:\Windows>sfc /SCANNOW
+
+
+
