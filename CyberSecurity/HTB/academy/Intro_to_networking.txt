@@ -378,3 +378,26 @@ Es fundamental tener en cuenta que solo podemos dividir las subredes basandonos 
 					2 			10.200.20.8 		10.200.20.9	 	10.200.20.14 	10.200.20.15		10.200.20.8/29
 					3 			10.200.20.16 		10.200.20.17 	10.200.20.22 	10.200.20.23		10.200.20.16/29
 					4 			10.200.20.24 		10.200.20.25 	10.200.20.30 	10.200.20.31		10.200.20.24/29
+
+
+---------- MAC Addresses ----------
+
+Cada host tiene su propia dirección de Control de Acceso al Medio (Media Access Control - MAC), correspondinte a la dirección
+física del dispositivo, consta de 48 bits, divididos en 6 octetos en formato hexadecimal. Hay varios estandares para las
+direcciones MAC:
+
+	* Ethernet		(IEEE 802.3)
+	* Bluetooth		(IEEE 802.15)
+	* WLAN			(IEEE 802.11)
+
+Cada tarjeta de red tiene su dirección MAC única, que es configurada en el hardware por el fabricante, pero que puede ser cambiada
+temporalmente por software.
+
+
+	Representation 	1st Octet 	2nd Octet 	3rd Octet |	4th Octet 	5th Octet 	6th Octet
+	Binary 			1101 1110 	1010 1101 	1011 1110 |	1110 1111 	0001 0011 	0011 0111
+	Hex 			DE 			AD 			BE 		  |	EF 			13 			37
+	__________________________________________________|__________________________________
+				 Organization Unique Identifier (OUI) | Network Interface Control (NIC) 
+
+				 
