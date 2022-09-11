@@ -398,6 +398,99 @@ temporalmente por software.
 	Binary 			1101 1110 	1010 1101 	1011 1110 |	1110 1111 	0001 0011 	0011 0111
 	Hex 			DE 			AD 			BE 		  |	EF 			13 			37
 	__________________________________________________|__________________________________
-				 Organization Unique Identifier (OUI) | Network Interface Control (NIC) 
+				 Organization Unique Identifier (OUI) | Network Interface Control (NIC) o Individual Address Part
+	
 
+
+El Protocolo de Resolución de Direcciones (ARP - Address Resolution Protocol) se utiliza en IPv4 para determinar las direcciones
+MAC asociadas a las direcciones IP.
+
+	Direcciones MAC reservadas
+
+		* Rango local
+						02:00:00:00:00:00
+						06:00:00:00:00:00
+						0A:00:00:00:00:00
+						0E:00:00:00:00:00
+
+El último bits del primer octeto pueden tener dos estados 0 y 1
+
+	MAC Unicast 	->	bit 0	->	paquete enviado a un host especifico
+
+		Representation 	1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	5th Octet 	6th Octet
+		Binary			1101 1110 	1010 1101 	1011 1110 	1110 1111 	0001 0011 	0011 0111
+		Hex				DE			AD			BE			EF			13			37
+
+	MAC Multicast	->	bit 1	->	un solo paquete a todos los host de la red
+
+		Representation 	1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	5th Octet 	6th Octet
+		Binary			0000 0001 	0000 0000 	0101 1110 	1110 1111 	0001 0011 	0011 0111
+		Hex				01			00			5E			EF			13			37
+		
+	MAC Broadcast	->	FF:FF:FF:FF:FF:FF	-> 	transmisión desde un punto a todos los miembros de una red, útil cuando no se conoce
+												la IP del receptor.
 				 
+El penúltimo bit del primer también puede tener dos estados 0 y 1
+	
+	MAC Global OUI				-> definida por la IEEE
+
+		Representation 	1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	5th Octet 	6th Octet
+		Binary			1101 1100 	1010 1101 	1011 1110 	1110 1111 	0001 0011 	0011 0111
+		Hex 			DC			AD			BE			EF			13			37
+
+	MAC Locally Administrated	->
+
+		Representation 	1st Octet 	2nd Octet 	3rd Octet 	4th Octet 	5th Octet 	6th Octet
+		Binary			1101 1110 	1010 1101 	1011 1110 	1110 1111 	0001 0011 	0011 0111
+		Hex				DE			AD			BE			EF			13			37	 
+
+
+---------- IPv6 Addresses ----------
+
+Su longitud es de 128 bits, divididos en en 8 bloques de 16 bits, cuenta con prefijo para identificar la parte de red y la parte de host.
+IPv4 e IPv6 pueden estar disponibles simultaneamente Dual Stack. 
+
+Sigue el principio de extremo a extremo (end-to-end) proporcionando direcciones IP públicas para cualquier dispositivo sin necesidad de NAT.
+
+Su representación es en notación hexadecimal
+
+	Ventajas				
+				Larger address space					->	mayor espacio de direcciones
+				Address self-configuration (SLAAC)		->	autoconfiguración de direcciones
+				Multiple IPv6 addresses per interface	->	varias direcciones IP por interfaz
+				Faster routing							->	enrutamiento más rapido
+				End-to-end encryption (IPsec)			->	cifrado extremo a extremo IPSec
+				Data packages up to 4 GByte				->	paquetes de datos de hasta 4GB
+
+
+	Tipos
+	Unicast		->	direcciones para una sola interfaz
+	Anycast 	->	direcciones para múltiples interfaces, donde solo una recibe el paquete.
+	Multicast 	->	direcciones para múltiples interfaces, donde todas reciben el mismo paquete.
+	Broadcast 	->	no existe, se realiza con multicast address
+
+
+Los bloques de 16 bits equivalen a 4 números hexadecimales que se agrupan, y cada bloque se separa por dos puntos (:).
+
+El RFC 5952 define la notación de IPv6:
+
+	*	todos los caracteres alfabéticos se escriben siempre en minuscula
+	*	todos los caracteres iniciales de un bloque se omiten siempre
+	*	uno o más bloques consecutivos de 4 ceros se acortan con ::
+	*	el acortamiento de dos puntos (::) solo puede realizarse una vez empezando por la izquierda
+
+	ej:			
+    	Full IPv6: fe80:0000:0000:0000:dd80:b1a9:0087:2d3b/64
+    	Short IPv6: fe80::dd80:b1a9:87:2d3b/64
+
+
+
+    Parte de red	->	Network Prefix (prefijo de red)			->	identifica la red, sudred o rango de direcciones
+    
+	Parte de host	->	Interface Identifier or Suffix 
+						(identificador de interface o sufijo)	->	se forma a partir de la MAC address del equipo
+
+
+La longitud del prefijo por defecto es /64, sin embargo pueden haber otros prefijos como /32, /48, /56
+
+
