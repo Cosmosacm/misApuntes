@@ -1,0 +1,26 @@
+# **La triada CIA**  
+
+## **Confidencialidad (Confidentiality)**  
+
+Se refiere a permitir el acceso autorizado a la información y, al mismo tiempo,protegerla de una divulgación indebida.  
+
+> El profesional de la seguridad, tiene la obligación de regular el acceso para proteger los datos que necesitan protección, y a la vez, permitir el acceso a las personas autorizadas.  
+
+- **Personally Identifiable Information  (PII) :** la Información de Identificación Personal se refiere a cualquier dato sobre un individuo que pueda utilizarse para identificarlo.  
+
+- **Protected Health Information (PHI) :** la Información de Salud Protegida es la información sobre el estado de salud de una persona, e información clasificada o confidencial, que incluye secretos comerciales, investigaciones, planes de negocios y propiedad intelectual.  
+
+- **Sensitivity :** la Sensibilidad es una medida de la importancia que se le asigna a la información por parte de su propietario, o el propósito de denotar su necesidad de protección. En muchos casos, está relacionada con el daño a las partes interesadas externas, que vienen siendo las personas u organizaciones que pueden no ser parte de la organización que procesa o utiliza la información.  
+
+## **Integridad (Integrity)**  
+
+Es la propiedad de la información por la que se registra, utiliza y mantiene de forma que se garantice su integridad, exactitud, coherencia interna y utilidad para un fin determinado. La integridad aplica a:  
+
+- Información o datos  
+- Los sistemas y procesos de las operaciones empresariales  
+- Las organizaciones  
+- Las personas y sus acciones  
+
+## **Disponibilidad (Availability)**  
+
+Significa que los sistemas y los datos son accesibles en el momento en que los usuarios los necesitan.  
