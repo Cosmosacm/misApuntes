@@ -1,10 +1,14 @@
 # **La triada CIA**  
 
+## **Source**  
+
+[ISC2 Certified in Cybersecurity](https://www.isc2.org/Certifications/CC) | [NIST 800-66](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-66r1.pdf)
+
 ## **Confidencialidad (Confidentiality)**  
 
-Se refiere a permitir el acceso autorizado a la información y, al mismo tiempo,protegerla de una divulgación indebida.  
+Es la propiedad de que los datos o la información no estén disponibles ni se divulguen a personas o procesos no autorizados. Se refiere a permitir el acceso autorizado a la información y, al mismo tiempo, protegerla de una divulgación indebida.  
 
-> El profesional de la seguridad, tiene la obligación de regular el acceso para proteger los datos que necesitan protección, y a la vez, permitir el acceso a las personas autorizadas.  
+> El profesional de la seguridad tiene la obligación de regular el acceso para proteger los datos que necesitan protección, y a la vez, permitir el acceso a las personas autorizadas.  
 
 - **Personally Identifiable Information  (PII) :** la Información de Identificación Personal se refiere a cualquier dato sobre un individuo que pueda utilizarse para identificarlo.  
 
@@ -20,6 +24,12 @@ Es la propiedad de la información por la que se registra, utiliza y mantiene de
 - Los sistemas y procesos de las operaciones empresariales  
 - Las organizaciones  
 - Las personas y sus acciones  
+
+**Integridad de los datos** es la garantía de que los datos no han sido alterados de forma no autorizada, abarcando los datos almacenados, durante el procesamiento y en transito.  
+
+ **Integridad del sistema** se refiere al mantenimiento de una buena configuración conocida y una función operativa esperada mientras el sistema procesa la información.  
+
+Para garantizar la integridad, se debe realizar una comparativa entre el estado actual de los datos o de un sistema y un estado tomado como referencia denominado linea base o baseline, correspondiente al estado en momento determinado.  
 
 ## **Disponibilidad (Availability)**  
 
