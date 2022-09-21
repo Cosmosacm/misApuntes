@@ -56,89 +56,117 @@
     4. **[:upper:]**    coincide con cualquier letra mayúscula
     5. **[:lower:]**    coincide con cualquier letra minúscula
 
-## **Entradas**  
+## **Entrada y Salida Estandar**  
 
-* **teclado**   --> entrada estandar: stdin 0  
+Los datos en operaciones de entrada y salidad se organizan como archivo, es decir un flujo continuo de datos ordenados tal como lo es un archivo.  
 
-* **comandos**  --> stdout 1  
+### **Entrada estandar**  
 
-* **salida estarndar** ->   monitor  
-                                                         stderr 2
+**stdin 0** --> el teclado entrega un flujo de datos ordenado, lo que permite redireccionar los datos del teclado a un archivo.  
 
-    Redirecciones
+### **Salida estandar**  
 
-        >       redirecciona la salida estandar  
-        >>      concatena la salida con lo que este en el archivos  
-        2>      redirecciona la salida error  
-        2>&1    redirecciona la salida error y la salida estandar  
+**stdout 1**  -->   los comandos y programas también entregan un flujo de datos continuo que se ordena, por lo que se pueden redireccionar a un archivo.  
+
+### **Error estandar**  
+
+**stderr 2**  -->  
+
+### **Redireccionamiento**
+
+* **\>**    redirecciona la salida estandar  
+* **\>>**   concatena la salida con lo que este en el archivos  
+* **2>**    redirecciona la salida error  
+* **2>&1**  redirecciona la salida error y la salida estandar  
         
         
-    Operador pipe
+#### **Operador pipe**  
 
-        |   permite tomar la salida estandar de un comando y pasarla como entrada estandar a otro comando
+Permite tomar la salida estandar de un comando y pasarla como entrada estandar a otro comando
 
+#### **Operadores de control**  
 
-    Operadores de control
-                            permiten encadenar comandos:
-        
-        ;   permite encadenar comandos en la misma linea que se ejecutaran de manera sincrónica
+Permiten encadenar comandos:  
 
-        &   permite encadenar comandos que se ejecutan de manera asincróna o de manera paralela, se ejecutan en segundo plano
+* **;** permite encadenar comandos en la misma linea que se ejecutaran de manera sincrónica
 
-        &&  permite encadenar comandos de manera condicional, si se cumple el primero se ejecuta el siguiente...
-            condición AND
+* **&** permite encadenar comandos que se ejecutan de manera asincróna o de manera paralela, se ejecutan en segundo plano
 
-        ||  permite encadenar comandos de manera codicional, si se cumple o no se cumple el primero  el siguiente siempre se 
-            ejecuta...
-            condición OR
+* **&&**    permite encadenar comandos de manera condicional, si se cumple el primero se ejecuta el siguiente... condición **AND**
 
+* **||**    permite encadenar comandos de manera codicional, si se cumple o no se cumple el primero  el siguiente siempre se ejecuta... condición **OR**  
 
-    Permisos
-            
-            tipos de archivos:   -   archivo,    d   directorio,     l   enlace simbolico,       b   bloque especial
+## **Permisos**  
 
-            permisos de usuarios:   propietario/owner,  grupo/group,  otros/world
+### Tipos de archivos  
 
-            tipos de permisos:  r   lectura/readable,    w   escritura/writeble,  x   ejecución/executable
+1. **\-**    archivo
+2. **d**    directorio  
+3. **l**    enlace simbolico
+4. **b**    bloque especial
 
-                binario octal   propietario     grupo       otros
-                000     0       -               -           -
-                001     1       -               -           x
-                010     2       -               w           -
-                011     3       -               w           x
-                100     4       r               -           -
-                101     5       r               -           x
-                110     6       r               w           -
-                111     7       r               w           x
+### Permisos de usuarios  
 
-            
-            modo simbolico:     u   usuario,    g   grupo,  o   otros,  a   todos
+1. propietario/owner  
+2. grupo/group  
+3. otros/world
 
+### Tipos de permisos  
 
-    Modificar permisos:     +   añade,  -   quita,  =   asigna
+1. **r**    lectura/readable  
+2. **w**    escritura/writeble  
+3. **x**    ejecución/executable
 
-                $ chmod 755 file                rwxrw-rw-
-                $ chmod u+rwx,go+w file         rwxrw-rw-
+| binario octal | propietario | grupo | otros |  
+| ------------- | ----------- | ----- | ----- |
+| 000   ->  0   | -           | -     | -     |
+| 001   ->  1   | -           | -     | x     |
+| 010   ->  2   | -           | w     | -     |
+| 011   ->  3   | -           | w     | x     |
+| 100   ->  4   | r           | -     | -     |
+| 101   ->  5   | r           | -     | x     |
+| 110   ->  6   | r           | w     | -     |
+| 111   ->  7   | r           | w     | x     |
 
-                $ chmod 644 file                rw-r--r--
-                $ chmod u+rw-x,go+r-w+x file    rw-r--r--
-                $ chmod u=rwx,go=r file         rw-r--r--
+### Modo simbolico  
 
-    
-    Cambiar de usuario: 
-                
-                $ whoami                    --> usuario actual
-                $ su nombre_usuario         --> usuario actual a usuario a switchar ej: nombre_usuario
-                $ sudo su                   --> usuario actual a usuarioi root
+1. **u**    usuario  
+2. **g**    grupo  
+3. **o**    otros  
+4. **a**    todos  
+
+### Modificar permisos  
+
+1. **\+**   añade  
+2. **\-**   quita  
+3. **=**    asigna  
+
+        ~$ chmod 755 file                rwxrw-rw-  
+
+        ~$ chmod u+rwx,go+w file         rwxrw-rw-  
+
+        ~$ chmod 644 file                rw-r--r--  
+
+        ~$ chmod u+rw-x,go+r-w+x file    rw-r--r--  
+
+        ~$ chmod u=rwx,go=r file         rw-r--r--  
+
+### Cambiar de usuario  
+
+        ~$ whoami                    --> usuario actual  
+        ~$ su nombre_usuario         --> usuario actual a usuario a switchar
+        ~$ sudo su                   --> usuario actual a usuario root  
                         
-    Cambiar password:
-                        $ passdw nombre_usuario
+### Cambiar password:  
+        ~$ passdw nombre_usuario
     
 
-    Enlace simbolico:
-                        $ ln -s /ruta/directorio/que/deseas/ nombre_link_simbolico
+### Enlace simbolico  
+
+        ~$ ln -s /ruta/directorio/que/deseas/ nombre_link_simbolico
     
-    Variables de entorno
+### **Variables de entorno**  
+
                             $ printenv                      --> imprime todas las variables de entorno
 
                             $ echo $VARIABLE_DE_ENTORNO     --> imprime el contenido de la variable de entorno
