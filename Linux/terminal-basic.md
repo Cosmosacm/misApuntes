@@ -117,6 +117,14 @@ Permiten encadenar comandos:
 2. **w**    escritura/writeble  
 3. **x**    ejecución/executable
 
+name_user@name_host:~$ ls -lha
+total 20K
+drwxr-xr-x 3 name_usuario name_grupo 4.0K Sep 20 22:48 .
+drwxr-xr-x 4 cosmosacm cosmosacm 4.0K Sep 20 11:29 ..
+-rw-r--r-- 1 cosmosacm cosmosacm   53 Sep 20 11:40 datos1
+-rw-r--r-- 1 cosmosacm cosmosacm   53 Sep 20 11:30 datos.txt
+drwxr-xr-x 2 cosmosacm cosmosacm 4.0K Sep 20 22:48 prueba
+
 | binario octal | propietario | grupo | otros |  
 | ------------- | ----------- | ----- | ----- |
 | 000   ->  0   | -           | -     | -     |
