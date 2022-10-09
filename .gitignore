@@ -4,6 +4,7 @@
 *.mp4
 *.mp3
 *.pub
+*.pdf
 
 # se excluyen los nombres
 id_rsa
