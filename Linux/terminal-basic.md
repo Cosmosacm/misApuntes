@@ -239,9 +239,9 @@ Realiza busquedas de texto dentro de un archivo, utilizando regex (Regular Expre
 $ grep [regex] [archivoDondeBuscar]
 
 $ grep -i [regex] [archivoDondeBuscar]                  i ignora el case sensitive
-regex
+
 $ grep -c [regex] [archivoDondeBuscar]                  c cuenta las ocurrencias
-regex
+
 $ grep -v [regex] [archivoDondeBuscar]                  v excluye la regex de la busqueda
 
 $ grep -m num_lineas [regex] [archivoDondeBuscar]       m limita las lineas de busqueda
