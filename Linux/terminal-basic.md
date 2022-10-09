@@ -10,14 +10,14 @@
 * un programa ejecutable como `xdg-open`, `code`, `libreoffice`
 * un comando de utilidad de la shell como `cd`
 * una función de shell
-* un alias com `ls`
+* un alias como `ls`
 
 ## **Sistema de archivos**  
 
 ### **Visualizar archivos:**  
 
-`head`, `tail`, `less`, `cat`, `nano`, `more`, vim, nvim...  
-
+`head`, `tail`, `less`, `cat`, `nano`, `more`, `vim`, `nvim`...  
+`
 ### **Visualizar información:**  
 
 `file`, `type`, `help`, `man`, `info`, `whatis`, `which`, `whoami`  
@@ -27,13 +27,13 @@
 Se utiliza el comando `xdg-open` para abrir programas y archivos desde la linea de comandos
 
 * abrir editor de texto mousepad  
-  `$ xdg-open mousepad`  
+  `~$ xdg-open mousepad`  
 * abrir visual studio code  
-  `$ xdg-open code`  
+  `~$ xdg-open code`  
 * abrir libre office  
-  `$ xdg-open libreoffice`  
+  `~$ xdg-open libreoffice`  
 * abrir archivo pdf  
-  `$ xdg-open name_file.pdf`  
+  `~$ xdg-open name_file.pdf`  
 
 ### **Contatenar archivos:**  
 
@@ -206,45 +206,51 @@ ej:
 
 ## **Variables de entorno**  
 
-```bash
-$ printenv                              imprime todas las variables de entorno  
+* imprimir todas las variables de entorno  
 
-$ echo $VARIABLE_DE_ENTORNO             imprime el contenido de la variable de entorno  
-```  
+      ~$ printenv  
+
+* imprimir el contenido de la variable de entorno  
+
+      ~$ echo $VARIABLE_DE_ENTORNO  
 
 Algunas variables de entorno:  
 
-HOME            -->     indica el home del usuario 
-PATH            -->     indica las rutas de donde estás los binarios que usa el sistema
-BASH_VERSION    -->     versión del bash utilizado
-SHELL           -->     dirección de la shell que se esta utilizando
+* indica el home del usuario 
+  `~$ echo $HOME`  
+* indica las rutas de donde estás los binarios que usa el sistema
+  `~$ echo $PATH`  
+* versión del bash utilizado  
+  `~$ echo $BASH_VERSION`
+* dirección de la shell que se esta utilizando  
+  `~$ echo $SHELL`  
 
 ## **Comandos de busqueda:**  
 
 ```bash
-$ which nombre_comando                                  imprime la ruta de los binarios
+~$ which nombre_comando                                  imprime la ruta de los binarios
 
-$ find ~/ruta/busqueda -name nombre_file                imprime de las coincidencias con nombre_file
+~$ find ~/ruta/busqueda -name nombre_file                imprime de las coincidencias con nombre_file
 
-$ find ~/ruta/busqueda -name nombre_file | less
+~$ find ~/ruta/busqueda -name nombre_file | less
 
-$ find ~/ruta/busqueda -type d -name nombre_dir         d para directorios
+~$ find ~/ruta/busqueda -type d -name nombre_dir         d para directorios
 
-$ find ~/ruta/busqueda -type f -name *.log              f para archivo ej: .log
+~$ find ~/ruta/busqueda -type f -name *.log              f para archivo ej: .log
 
-$ find ~/ruta/busqueda -type l                          l para enlaces simbolicos
+~$ find ~/ruta/busqueda -type l                          l para enlaces simbolicos
 
-$ find ~/ruta/busqueda -size 20M                        imprime archivos con tamaño igual a 20M
+~$ find ~/ruta/busqueda -size 20M                        imprime archivos con tamaño igual a 20M
 
-$ find ~/ruta/busqueda -size +20M                       imprime archivos con tamaño mayor a 20M
+~$ find ~/ruta/busqueda -size +20M                       imprime archivos con tamaño mayor a 20M
 
-$ find ~/ruta/busqueda -size -20M                       imprime archivos con tamaño menor a 20M
+~$ find ~/ruta/busqueda -size -20M                       imprime archivos con tamaño menor a 20M
 
-$ find ~/ruta/busqueda -type [d,f] -empty               imprime archivos/directorios vacios
+~$ find ~/ruta/busqueda -type [d,f] -empty               imprime archivos/directorios vacios
 
-$ find ~/ruta/busqueda -type d -maxdepth 2              busca a máximo 2 directorios de profundidad
+~$ find ~/ruta/busqueda -type d -maxdepth 2              busca a máximo 2 directorios de profundidad
 
-$ find ~/ruta/busqueda -type d -mindepth 2              permite saltar niveles a minimo 2 directorios de profundidad
+~$ find ~/ruta/busqueda -type d -mindepth 2              permite saltar niveles a minimo 2 directorios de profundidad
 ```
 
 ### **Comando grep** (Global Regular Expression Print)  
@@ -252,15 +258,15 @@ $ find ~/ruta/busqueda -type d -mindepth 2              permite saltar niveles a
 Realiza busquedas de texto dentro de un archivo, utilizando regex (Regular Expression) para realizar su búsqueda.
 
 ```bash
-$ grep [regex] [archivoDondeBuscar]
+~$ grep [regex] [archivoDondeBuscar]
 
-$ grep -i [regex] [archivoDondeBuscar]                  i ignora el case sensitive
+~$ grep -i [regex] [archivoDondeBuscar]                  i ignora el case sensitive
 
-$ grep -c [regex] [archivoDondeBuscar]                  c cuenta las ocurrencias
+~$ grep -c [regex] [archivoDondeBuscar]                  c cuenta las ocurrencias
 
-$ grep -v [regex] [archivoDondeBuscar]                  v excluye la regex de la busqueda
+~$ grep -v [regex] [archivoDondeBuscar]                  v excluye la regex de la busqueda
 
-$ grep -m num_lineas [regex] [archivoDondeBuscar]       m limita las lineas de busqueda
+~$ grep -m num_lineas [regex] [archivoDondeBuscar]       m limita las lineas de busqueda
 ```  
 
 ### **Comando wc** (word count)  
@@ -272,7 +278,7 @@ Permite contar palabras, entrega cuatro elementos:
 * número_bits  
 * nombre_file
 
-      $ wc nombre_file          opciones: -l lineas, -w palabras, -c bytes, -m caracteres
+      ~$ wc nombre_file          opciones: -l lineas, -w palabras, -c bytes, -m caracteres
 
 ## **Compresión y Descompresión**  
 
@@ -280,36 +286,36 @@ Permite contar palabras, entrega cuatro elementos:
 
 * Sintaxis utilizada para comprimir:  
 
-  `$ tar [opciones] [nombre_archivo_comprimido][archivo_a_comprimir/directorio_a_comprimir]`
+  `~$ tar [opciones] [nombre_archivo_comprimido][archivo_a_comprimir/directorio_a_comprimir]`
 
-      $ tar -cvf comprimido.tar misArchivos/            c compresión .tar
+      ~$ tar -cvf comprimido.tar misArchivos/            c compresión .tar
                                                         v verboso
                                                         f archivos
                  
-      $ tar -czvf comprimido.tar.gz misArchivos/      z compresión .tar.gz o .tgz  
+      ~$ tar -czvf comprimido.tar.gz misArchivos/      z compresión .tar.gz o .tgz  
 
 * Sintaxis utilizada para descomprimir:  
 
-  `$ tar [opciones] [nombre_archivo_comprimido]`  
+  `~$ tar [opciones] [nombre_archivo_comprimido]`  
 
-      $ tar -xvf comprimido.tar       -x -> descompresión .tar
+      ~$ tar -xvf comprimido.tar       -x -> descompresión .tar
 
-      $ tar -xzvf comprimir.tar.gz    -z -> descompresión .tar.gz o .tgz
+      ~$ tar -xzvf comprimir.tar.gz    -z -> descompresión .tar.gz o .tgz
   
 
 ### **Comando zip**  
 
 * Sintaxis utilizada para comprimir:  
 
-  `$ zip [opciones] [nombre_archivo_comprimido] [archivo_a_comprimir/directorio_a_comprimir]`
+  `~$ zip [opciones] [nombre_archivo_comprimido] [archivo_a_comprimir/directorio_a_comprimir]`
 
-      $ zip -r comprimido.zip misArchivos/        r recursivo
+      ~$ zip -r comprimido.zip misArchivos/        r recursivo
 
 * Sintaxis utilizada para descomprimir:  
 
-  `$ unzip [opciones] [nombre_archivo_comprimido]`  
+  `~$ unzip [opciones] [nombre_archivo_comprimido]`  
 
-      $ unzip comprimido.zip  
+      ~$ unzip comprimido.zip  
 
 ## **Manejo de procesos**  
 
@@ -317,7 +323,7 @@ Permite contar palabras, entrega cuatro elementos:
 
 muestra los procesos que se ejecutan en 4 columnas, PID, TTY, TIME, CMD  
 
-      $ ps
+      ~$ ps
   
 * **PID** es el process ID
 * **TTY** teletypewrite o teletipo, que es un dispositivo físco o virtual que permite interactuar con el sistema a nivel del kernel
@@ -328,18 +334,18 @@ muestra los procesos que se ejecutan en 4 columnas, PID, TTY, TIME, CMD
 
 Muestra una interfaz con los procesos que se estan ejecutando más los recurso que consumen información adicional.  
 
-    $ top  
+    ~$ top  
 
 ### **Comando kill**
 
 Mata el proceso seleccionado con el número de PID  
 
-    $ kill numero_PID  
+    ~$ kill numero_PID  
 
 ### **Comando htop**  
 
-    $ htop
+    ~$ htop
 
 ### **Comando glandes**  
 
-    $ glandes
+    ~$ glandes
