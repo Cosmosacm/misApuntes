@@ -14,33 +14,48 @@
 
 ## **Sistema de archivos**  
 
-**visualizar archivos:**    `head`, `tail`, `less`, `cat`, `nano`, `more`...  
+### **Visualizar archivos:**  
 
-**visualizar información:** `file`, `type`, `help`, `man`, `info`, `whatis`, `which`, `whoami`  
+`head`, `tail`, `less`, `cat`, `nano`, `more`, vim, nvim...  
 
-**abrir archivos/directorios:**  
+### **Visualizar información:**  
 
-* `$ xdg-open mousepad`   --> abre el editor de texto mousepad  
-* `$ xdg-open code`   --> abre visual studio code
-* `$ xdg-open libreoffice`   --> abre el libre office  
+`file`, `type`, `help`, `man`, `info`, `whatis`, `which`, `whoami`  
 
-**contatenar archivos:**  
+# **Abrir archivos/directorios:**  
 
-* `~$ cat file1 file2`  --> concatena las lineas del archivo file1 con las del archivo file2  
+Se utiliza el comando `xdg-open` para abrir programas y archivos desde la linea de comandos
 
-**crear archivos:**
+* abrir editor de texto mousepad  
+  `$ xdg-open mousepad`  
+* abrir visual studio code  
+  `$ xdg-open code`  
+* abrir libre office  
+  `$ xdg-open libreoffice`  
+* abrir archivo pdf  
+  `$ xdg-open name_file.pdf`  
 
-* `~$ touch nombre_archivo`  
+### **Contatenar archivos:**  
 
-* `~$ tee`   --> crea archivos con base a una entrada  
+Concatena las lineas del archivo file1 con las del archivo file2  
 
-        ~$ cat file1 file2 | tee union.txt  
+    ~$ cat file1 file2  
 
-**organizar archivos:**  
+### **Crear archivos:**  
 
-* `sort` --> organiza alfábeticamente o numericamente la información suministrada con base en una salida  
+* crear un archivo con o sin extesión con el comando `touch` 
 
-        ~$ cat file1 | sort  
+      ~$ touch name_file
+
+* crear archivos con base a una entrada estandar proporcionada por el operador pipe, utilizando el comando `tee`  
+
+      ~$ cat file1 file2 | tee union.txt      
+
+### **Organizar archivos:**  
+
+Organiza alfábeticamente o numericamente la información suministrada como una entrada estandar proporcionada por el comando pipe, utilizando el comando `sort`  
+
+    ~$ cat file1 | sort  
 
 ## **Wildcards**  
 | opción | acción |  
@@ -92,7 +107,7 @@ Permite tomar la salida estandar de un comando y pasarla como entrada estandar a
 
 Permiten encadenar comandos:  
 
-* **;** permite encadenar comandos en la misma linea que se ejecutaran de manera sincrónica
+* **;** permite encadenar comandos en la misma linea, que se ejecutaran de manera sincrónica
 
 * **&** permite encadenar comandos que se ejecutan de manera asincróna o de manera paralela, se ejecutan en segundo plano
 
@@ -226,7 +241,8 @@ $ find ~/ruta/busqueda -size +20M                       imprime archivos con tam
 $ find ~/ruta/busqueda -size -20M                       imprime archivos con tamaño menor a 20M
 
 $ find ~/ruta/busqueda -type [d,f] -empty               imprime archivos/directorios vacios
-                                                                                                    $ find ~/ruta/busqueda -type d -maxdepth 2              busca a máximo 2 directorios de profundidad
+
+$ find ~/ruta/busqueda -type d -maxdepth 2              busca a máximo 2 directorios de profundidad
 
 $ find ~/ruta/busqueda -type d -mindepth 2              permite saltar niveles a minimo 2 directorios de profundidad
 ```
