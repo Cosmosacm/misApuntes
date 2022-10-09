@@ -47,7 +47,7 @@ Concatena las lineas del archivo file1 con las del archivo file2
 
       ~$ touch name_file
 
-* crear archivos con base a una entrada estandar proporcionada por el operador pipe, utilizando el comando `tee`  
+* crear archivos con base a una entrada estándar proporcionada por el operador pipe, utilizando el comando `tee`  
 
       ~$ cat file1 file2 | tee union.txt      
 
@@ -74,7 +74,7 @@ Organiza alfábeticamente o numericamente la información suministrada como una 
 | **[:upper:]** | coincide con cualquier letra mayúscula |
 | **[:lower:]** | coincide con cualquier letra minúscula |
 
-## **Entrada y Salida Estandar**  
+## **Entrada y Salida Estándar**  
 
 Los datos en operaciones de entrada y salidad se organizan como archivo, es decir un flujo continuo de datos ordenados tal como lo es un archivo.  
 
@@ -188,7 +188,7 @@ ej:
 ~$ chmod u=rwx,go=r file                rw-r--r--  
 ```
 
-## **Cambiar de usuario**  
+## **Cambiar de Usuario**  
 
 ```bash
 ~$ whoami                               visualiza usuario actual  
@@ -196,15 +196,15 @@ ej:
 ~$ sudo su                              cambia de usuario actual a root  
 ```
 
-## **Cambiar password:**  
+## **Cambiar Password:**  
 
     ~$ passdw name_user
 
-## **Enlace simbolico**  
+## **Enlace Simbolico**  
 
     ~$ ln -s /ruta/directorio/que/deseas/ nombre_link_simbolico  
 
-## **Variables de entorno**  
+## **Variables de Entorno**  
 
 * imprimir todas las variables de entorno  
 
@@ -225,7 +225,7 @@ Algunas variables de entorno:
 * dirección de la shell que se esta utilizando  
   `~$ echo $SHELL`  
 
-## **Comandos de busqueda:**  
+## **Comandos de Busqueda y Filtrado**  
 
 ```bash
 ~$ which nombre_comando                                  imprime la ruta de los binarios
@@ -268,6 +268,51 @@ Realiza busquedas de texto dentro de un archivo, utilizando regex (Regular Expre
 
 ~$ grep -m num_lineas [regex] [archivoDondeBuscar]       m limita las lineas de busqueda
 ```  
+### **Comando cut**  
+
+Extrae las partes seleccionadas de cada archivo en la salida estándar.  
+
+* la opción d permite delimitar por el carácter a seleccionar entre las comillas, creando un determinado número de campos dependiendo de la coincidencia con el carácter.  
+
+* la opción f seguido del número del campo, permite seleccionar el número del campo deseado  
+
+ej: para seleccionar el texto 'es' se debe delimitar por espacio, creando 3 campos y filtral or el campo 3, seguido del pipe para delimitar por : y seleccionar el campo 1:  
+
+    ~$ echo 'Mi nombre es:' | cut -d ' ' -f3 | cut -d ':' -f1  
+
+### **Comando sed**  
+
+Editor de texto en linea de comandos que permite extrar o filtrar texto de una entrada estandar por medio de expresiones regulares.  
+
+la regex `'s/.$/char/` consta del campo s para sustituir, seguido el campo .$ que corresponde al ultimo valor de un texto, y el ultimo campo char corresponde al carácter a reemplazar.  
+
+* se reemplaza el último valor por un =, cambiando los : por =  
+
+      ~$ echo 'Mi nombre es:' | sed 's/.$/=/'  
+
+* se reemplaza el último valor por nada, eliminando los :  
+
+      ~$ echo 'Mi nombre es:' | sed 's/.$//'  
+
+* se reemplaza los : por nada  
+
+      ~$ echo 'Mi nombre es:' | sed 's/://'  
+
+### **Comando tr**  
+
+Traslada, comprime y/o elimina caracteres de la entrada estándar, escribiendo en la salida estándar.  
+
+ej. elimina los : del texto  
+
+    ~$ echo 'Mi nombre es:' | tr -d ':'
+
+### **Comando awk**  
+
+gawk es un lenguaje de reconocimiento y procesamiento de patrones. Por defecto lee la entrada estándar y escribe en la salida estándar.  
+
+ej: reemplaza los : del texto por nada  
+
+    ~$ echo 'Mi nombre es:' | awk 'sub(":","")'
 
 ### **Comando wc** (word count)  
 
@@ -317,7 +362,7 @@ Permite contar palabras, entrega cuatro elementos:
 
       ~$ unzip comprimido.zip  
 
-## **Manejo de procesos**  
+## **Manejo de Procesos**  
 
 ### **Comando ps**  
 
