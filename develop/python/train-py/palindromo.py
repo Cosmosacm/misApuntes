@@ -29,6 +29,7 @@ def run():
 
 # Entry point o punto de entrada del programa
 if __name__ == '__main__':
+    # ejecuta la función principal
     run()
 
 
