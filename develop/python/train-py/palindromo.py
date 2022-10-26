@@ -1,4 +1,5 @@
 # ============================= Palindrómo =============================
+# by Cosmosacm... tomado @platzi
 # Aquella palabra o frase que se puede leer igual de izquierda a derecha
 # como de derecha a izquierda
 

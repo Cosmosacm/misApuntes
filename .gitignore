@@ -8,3 +8,6 @@
 
 # se excluyen los nombres
 id_rsa
+
+# se excluyen directoriso de python
+__pycache__/

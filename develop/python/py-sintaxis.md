@@ -1,5 +1,9 @@
 # **Sintaxis Python**  
 
+En Python si una variable se define con un unico valor que no va a cambiar durante toda la ejecución del programa, se considera que es una constante.  
+
+Python una variable definida en mayúscula la trata como una constante.  
+
 ## **Caracteres Especiales**  
 
 * **`\n`** : retorno de linea  
@@ -36,4 +40,6 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
 
 * **`AND o &&`** : y  
 * **`OR o ||`** : o  
-* **`NOT o !`** : no  
+* **`NOT o !`** : no
+
+by Cosmosacm...
