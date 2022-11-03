@@ -208,7 +208,7 @@ def numPrimo(numero: int):
         # hasta la mitad del número a calcular
         mitad = numero//2
         # el rango inicia en 3, hasta la mitad más 1 en saltos de 2 en 2
-        if numero == 1 or numero == 3 or numero == 5:
+        if numero == 3 or numero == 5:
             # es primo
             divisor = False
         else:

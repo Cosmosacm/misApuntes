@@ -8,6 +8,8 @@
 
 # se excluyen los nombres
 id_rsa
+links.txt
 
 # se excluyen directoriso de python
 __pycache__/
+venv*/
