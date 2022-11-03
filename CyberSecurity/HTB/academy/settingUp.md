@@ -1,6 +1,6 @@
 # **Setting UP (Preparación)**  
 
-Las penetration test (pruebas de penetración) se diferencian en términos de alcance, resultados esperados y entorno, dependiendo de la línea de servicio y la infraestructura de cada cliente. Las actividades en una pentration test pueden variar también en función del tipo de penetration test, lo que puede ampliar o limitar nuestro **entorno de trabajo** y nuestras capacidades.  
+Las penetration test (pruebas de penetración) se diferencian en términos de alcance, resultados esperados y entorno, dependiendo de la línea de servicio y la infraestructura de cada cliente. Las actividades en una penetration test pueden variar también en función del tipo de penetration test, lo que puede ampliar o limitar nuestro **entorno de trabajo** y nuestras capacidades.  
 
 ## **Working Environment (Entorno de Trabajo)**  
 
@@ -10,7 +10,7 @@ Preparar las herramientas adecuadas del entorno de trabajo para el primer día d
 * **organizado**  
 * **estructurado**  
 
-Nunca sabremos que vamos a encontrar al momento de enumerar la red y descubrir problemas; siempre habrá que compilar e instalar herramientas o crear o descargar scripts specificos en nuestra máquina virtual de ataque durante casit todas la evaluaciones que se realicen.  
+Nunca sabremos que vamos a encontrar al momento de enumerar la red y descubrir problemas; siempre habrá que compilar e instalar herramientas o crear o descargar scripts específicos en nuestra máquina virtual de ataque durante casi todas la evaluaciones que se realicen.  
 
 ### **Organización**  
 
@@ -18,23 +18,23 @@ Estructura de organización de directorios:
 
 * Penetration-testing  
   * pre-engagement  
-  * host-target (linux/windows)  
+  * host-target (Linux/Windows)  
     * information-gathering  
       * recon  
       * enum  
     * vulnerability-assessment  
-    * explotation  
-    * post-explotation  
+    * exploitation  
+    * post-exploitation  
     * lateral-movement  
   * reporting  
   * results  
 
-### **Password Magager (Gestor de Contraseña)**  
+### **Password Manager (Gestor de Contraseña)**  
 
 Problemas de contraseñas:  
 
 * complejidad  
-* reutiización
+* reutilización
 * recordar  
 
 ### **Actualizaciones y automatización**  

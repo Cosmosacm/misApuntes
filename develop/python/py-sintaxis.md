@@ -1,6 +1,6 @@
 # **Sintaxis Python**  
 
-En Python si una variable se define con un unico valor que no va a cambiar durante toda la ejecución del programa, se considera que es una constante.  
+En Python si una variable se define con un único valor que no va a cambiar durante toda la ejecución del programa, se considera que es una constante.  
 
 Python una variable definida en mayúscula la trata como una constante.  
 
@@ -13,8 +13,8 @@ Python una variable definida en mayúscula la trata como una constante.
 * **`\t`** : tabulador  
 * **`\v`** : tabulador vertical  
 * **`\\`** : backslash  
-* **`\"`** : comilla doble  
-* **`\'`** : comilla simple  
+* **`\"`** : comillas doble  
+* **`\'`** : comillas simple  
 * **`\xNN`** : carácter hexadecimal NN en ascii  
 * **`\uNN`** : carácter hexadecimal NN en unicode  
 * **`\oNN`** : carácter octal NN  

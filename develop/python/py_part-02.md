@@ -10,9 +10,9 @@ Para visualizar el **zen de python**, en la consola interactiva de python se ing
 
 ### **PEP (Python Enhancement Proposals)**  
 
-Se refiere a las **propuestas de mejora de python**, y contiene la documentación que conforma las **guias de estilos** del lenguaje, el **como funciona** y **como se debería escribir** de manera correcta.
+Se refiere a las **propuestas de mejora de python**, y contiene la documentación que conforma las **guías de estilos** del lenguaje, el **como funciona** y **como se debería escribir** de manera correcta.
 
-## **Moduls**
+## **Modules**
 
 Un modulo es un código escrito por nosotros mismos u otras personas creado para solucionar un problema en particular o proporcionar funcionalidades. El código se puede reutilizar de manera rápida en otros programas para evitar estar reinventando la rueda en cada ocasión.  
 
@@ -23,7 +23,7 @@ Un **entorno virtual** en python es un **espacio de trabajo separado** en el que
 * **Como crear un entorno virtual**  
 `python3 -m venv name_entorno`
   * **`python3`** es el comando de python utilizado en Linux, Mac y Windows  
-  * **`-m`** es un flat o bandera que indica que se utilizará un módulo interno del lenguaje    
+  * **`-m`** es un flat o bandera que indica que se utilizará un módulo interno del lenguaje  
   * **`venv`** corresponde al módulo de entornos virtuales (virtual environment)  
   * **`name_entorno`** es el nombre que le daremos al entorno virtual para identificarlo, por convención se utiliza venv  
 
@@ -154,7 +154,7 @@ six==1.16.0
 listSquare = [i**2 for i in range(1, 101) if i%3 !=0]
 ```  
 
-## **Dictionay Comprehensions**  
+## **Dictionary Comprehensions**  
 
 `[key: value for value in iterable if condition]`
 
@@ -176,19 +176,19 @@ En en los errores de sintaxis python detiene el programa y no ejecuta ni si quie
 
 ### **Exception**  
 
-Las exepciones ocurren en alguna parte del programa y hacen que este quiebre el resto de la lógica.  
+Las excepciones ocurren en alguna parte del programa y hacen que este quiebre el resto de la lógica.  
 
 Python muestra los errores de excepciones a través del mensaje denominado **traceback**, y este mensaje se lee de abajo hacia arriba o desde el final hacia el inicio.  
 
 1. La última línea muestra el **tipo de excepción** y una **breve explicación** del error.
-2. La penultima línea muestra el nombre del archivo (**File**), en caso de estar en la consola interactiva aparece **"\<stdin\>"**.  
+2. La penúltima línea muestra el nombre del archivo (**File**), en caso de estar en la consola interactiva aparece **"\<stdin\>"**.  
 3. La antepenultima línea muestra la traza del error, explicando de donde parte el error.
 
-Ejemplo de algunsa excepciones:
+Ejemplo de algunas excepciones:
 
 * **`KeyboardInterrupt`**: ocurre cuando pulsamos `ctrl+C` en la consola interactiva de python, se corta el proceso y todo se cierra; python eleva la excepción desde dentro hacia afuera y termina el proceso.  
 * **`KeyError`**: ocurre cuando intentamos acceder a una llave que no existe en un diccionario.  
-* **`IndexError`**: occure cuando intentamos acceder a un indice que no existe una lista.  
+* **`IndexError`**: ocurre cuando intentamos acceder a un indice que no existe una lista.  
 * **`FileNotFoundError`**: ocurre cuando intentamos abrir un archivo que no existe.  
 * **`ZeroDivisionError`**: ocurre cuando intentamos dividir un número entre cero.  
 * **`ImportError`**: ocurre cuando intentamos importar un módulo, y existe algún error en el módulo y este falla.
@@ -205,25 +205,25 @@ Probar y excepto que, hacer lo siguiente.
 
 ```python
 try: 
-    bloque_codigo_A   # seccion try
+    bloque_código_A   # seccion try
 
 except Tipo_Error:
-    bloque_codigo_B   # sección except
+    bloque_código_B   # sección except
 
-bloque_codigo_C
+bloque_código_C
 ```  
 
-1. La sección **`try`** prueba todo el bloque de código de dicha sección `codigo_bloque_A`.  
-Si no se presentan excepciones, el flujo del programa sigue un curso normal y no se ejectuta la sección `except` y pasa al siguiente bloque de código `bloque_codigo_C`.
+1. La sección **`try`** prueba todo el bloque de código de dicha sección `código_bloque_A`.  
+Si no se presentan excepciones, el flujo del programa sigue un curso normal y no se ejecuta la sección `except` y pasa al siguiente bloque de código `bloque_código_C`.
 2. Si ocurre una excepción en el bloque de código de la sección del `try` entonces, el flujo del programa pasa a la sección del `except`, aquí se captura la excepción.  
-    * Si la excepción capturada corresponde al mismo tipo de error definido `Tipo_Error`, entonces se ejecuta el bloque de código `bloque_codigo_B` de la sección `except`.  
+    * Si la excepción capturada corresponde al mismo tipo de error definido `Tipo_Error`, entonces se ejecuta el bloque de código `bloque_código_B` de la sección `except`.  
     * Si la excepción capturada no corresponde al mismo tipo de error definido `Tipo_Error`. entonces la excepción se levanta y cierra el programa mostrando el mensaje **traceback**.  
 
 Ej:
 
 ```python
 def unaFunc(var: str):
-    print('Igresaste este texto: ' + var)
+    print('Ingresaste este texto: ' + var)
 
 try:
     unaFunc(7)
@@ -243,7 +243,7 @@ Ej:
 def palindrome(texto):
     try:
         if len(texto) == 0:
-          raise ValueError('No se puede ingresar una cadena vacia')
+          raise ValueError('No se puede ingresar una cadena vacía')
         return texto == texto[::-1]
     except ValueError as err
         print(err)
@@ -268,7 +268,7 @@ Se utiliza al final de una estructura `try, except` para realizar una de las sig
 try:
     f = open('archivo.txt')
     # hacer cualquier cosa con el archivo
-    bloque_codigo
+    bloque_código
 finally:
     # ejecuta este código exista un error o no 
     f.close()
@@ -280,7 +280,7 @@ Ej:
 def palindrome(texto):
     try:
         if len(texto) == 0:
-          raise ValueError('No se puede ingresar una cadena vacia')
+          raise ValueError('No se puede ingresar una cadena vácia')
         return texto == texto[::-1]
     except ValueError as err
         print(err)
@@ -295,7 +295,7 @@ except TypeError:
 
 ## **Assert Statements**  
 
-Afirmo que esta condición es verdadera, sino corte el programa e imprema este mensaje de error
+Afirmo que esta condición es verdadera, sino corte el programa e imprima este mensaje de error
 
 Sintaxis: **`assert condición, mensaje de error`**
 
@@ -311,7 +311,7 @@ print(palindrome(''))
 
 ## **Archivos**  
 
-* **Archivo de texto:** tienen bytes que solo reprentan carácteres como letras, números, simbolos, etc.  
+* **Archivo de texto:** tienen bytes que solo representan caracteres como letras, números, símbolos, etc.  
 
   `.txt`, `.json`, `.xml`, `.py`, `.js`, `.csv`, `.css`
 
@@ -332,7 +332,7 @@ w+ -> Escritura y lectura. Sobre escribe el archivo si existe. Crea el archivo s
 a -> Añadido (agregar contenido). Crea el archivo si éste no existe
 a+ -> Añadido (agregar contenido) y lectura. Crea el archivo si éste no existe.
 
-Con respecto a lo mencionado por alli desde el minuto 1:46 hasta 2:33 aprox… realmente puedes manejar archivos .mp3, .mp4, .jpg, .png en python…es el pan nuestro de cada día en el area de visión artificial en donde librerias como openCV lo hacen bastante amigable e interesante…
+Con respecto a lo mencionado por allí desde el minuto 1:46 hasta 2:33 aprox… realmente puedes manejar archivos .mp3, .mp4, .jpg, .png en python…es el pan nuestro de cada día en el area de visión artificial en donde librerias como openCV lo hacen bastante amigable e interesante…
 por ejemplo, un video en formato .mp4 es perfectamente transformable en una matriz numérica que representa por medio de estos número los canales RGB que posee cada pixel y que en general almacena la totalidad del pixeles de una imagen…
 
 dejo este enlace para quien tenga curiosidad:

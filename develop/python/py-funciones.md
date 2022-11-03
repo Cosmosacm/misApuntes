@@ -90,7 +90,7 @@ tuple() -> ()
 * `tupla.count(elemento)`: El método `count` busca el elemento dentro de la tupla y retorna la cantidad de coincidencias que encuentre.  
 * `tupla.index(elemento, [star_index]..., [stop_index]..., )`: El método `index` busca el elemento dentro de la tupla y retorna index de la primera coincidencia que encuentre. Tiene como parametros opcionales el index desde donde quiero iniciar y el index hasta donde quiero parar.  
 
-### **Métodos con dicionarios**  
+### **Métodos con diccionarios**  
 
 dict() -> {}  
 
@@ -98,15 +98,15 @@ Es una estructura de datos mutable que almacena diferentes tipos de valores, sin
 
 * `diccionario.keys()`: El método `keys` retornar las claves de un diccionario.  
 * `diccionario.values()`: El método `values` retorna los valores de un diccionario.  
-* `diccionario.items()`: El método `items` devuelve una tupla lista de tuplas (primero la clave y luego el valor)
+* `diccionario.items()`: El método `items` devuelve una lista de tuplas (primero la clave y luego el valor)
 
 .clear() —> Elimina todos los items del diccionario
 
 .pop(“n”) —> Elimina el elemento ingresado
 
-## **Funciones Anonimas**
+## **Funciones Anónimas**
 
-Es una función que no tiene un identificador (**sin nombre**), y que tienen una serie de carácteristicas particulares; en python se le conocen como **lambda function**.  
+Es una función que no tiene un identificador (**sin nombre**), y que tienen una serie de características particulares; en python se le conocen como **lambda function**.  
 
 La funciones lambda pueden tener los **argumentos** que se necesiten, pero solo **una línea de código**. 
 

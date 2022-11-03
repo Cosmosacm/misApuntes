@@ -6,7 +6,7 @@ Validar si los servicios **openSSH-client** y **openSSH-server** están instalad
 
     1. Abrir Configuraciones (Settings)
     2. Seleccionar Aplicaciones (Apps)
-    3. Características opcionales (optional feactures)
+    3. Características opcionales (optional features)
 
 
 Validar estatus de los puertos abiertos
