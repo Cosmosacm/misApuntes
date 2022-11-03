@@ -1,0 +1,13 @@
+
+*********************
+	netstat
+*********************
+
+Puertos abiertos
+
+>netstat -an
+
+>netstat -a
+
+
+
