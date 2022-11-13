@@ -62,10 +62,10 @@ Como ejemplo se toma variable como cualquier variable que contiene un string o u
 * `variable.upper()`: El método `upper` convertirá todas las letras en mayúsculas.  
 * `variable.capitalize()`: El método `capitalize` convertirá la primera letra de la cadena de caracteres en mayúscula.  
 * `variable.title()`: El método `title` convertirá la primera letra de cada palabra de una cadena en mayúscula.
-* `variable.replace(‘caneda_a_buscar’, ‘cadena_nueva’)`: El método `replace` remplazará un cadena de texto por otra.  
+* `variable.replace(‘cadena_a_buscar’, ‘cadena_nueva’)`: El método `replace` remplazará un cadena de texto por otra.  
 * `len(variable)`: El método `len` calcula la longitud de la cadena de texto (total de caracteres) dentro de la variable.  
 * `variable.count('cadena_a_buscar')`: El método `count` calcula la cantidad de veces que aparece una cadena de texto dentro de otra.  
-* `variable.split('cadena_a_buscar')`: El método `split` convierte una cadena de texto en una lista de elementos separados por un caracter en concreto.  
+* `variable.split('cadena_a_buscar')`: El método `split` convierte una cadena de texto en una lista de elementos separados por un carácter en concreto.  
 * `variable.splitlines()`: El método `splitlines` convierte una cadena de texto en una lista de elementos que se encuentran separados por saltos de linea.  
 
 * `variable.center(tamaño_total_cadena, 'carácter')`: El método `center` centra la cadena de texto de la variable dentro de una cadena de texto mayor de tamaño que desea utilizar, añadiendo el carácter deseado a la izquierda y a la derecha del mismo.  
@@ -88,7 +88,7 @@ list()  -> []
 tuple() -> ()
 
 * `tupla.count(elemento)`: El método `count` busca el elemento dentro de la tupla y retorna la cantidad de coincidencias que encuentre.  
-* `tupla.index(elemento, [star_index]..., [stop_index]..., )`: El método `index` busca el elemento dentro de la tupla y retorna index de la primera coincidencia que encuentre. Tiene como parametros opcionales el index desde donde quiero iniciar y el index hasta donde quiero parar.  
+* `tupla.index(elemento, [star_index]..., [stop_index]..., )`: El método `index` busca el elemento dentro de la tupla y retorna index de la primera coincidencia que encuentre. Tiene como parámetros opcionales el index desde donde quiero iniciar y el index hasta donde quiero parar.  
 
 ### **Métodos con diccionarios**  
 
@@ -108,7 +108,7 @@ Es una estructura de datos mutable que almacena diferentes tipos de valores, sin
 
 Es una función que no tiene un identificador (**sin nombre**), y que tienen una serie de características particulares; en python se le conocen como **lambda function**.  
 
-La funciones lambda pueden tener los **argumentos** que se necesiten, pero solo **una línea de código**. 
+La funciones lambda pueden tener los **argumentos** que se necesiten, pero solo **una línea de código**.  
 
 **El resultado** de una función lambda **se almacena** en una **variable**, la cual se va a utilizar como el identificar de una función lambda en particular.  
 

@@ -15,8 +15,8 @@ Python una variable definida en mayúscula la trata como una constante.
 * **`\\`** : backslash  
 * **`\"`** : comillas doble  
 * **`\'`** : comillas simple  
-* **`\xNN`** : carácter hexadecimal NN en ascii  
-* **`\uNN`** : carácter hexadecimal NN en unicode  
+* **`\xNN`** : carácter hexadecimal NN en ASCII  
+* **`\uNN`** : carácter hexadecimal NN en Unicode  
 * **`\oNN`** : carácter octal NN  
 
 ## **Operadores Aritméticos**  
@@ -43,7 +43,6 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
 * **`AND o &&`** : y  
 * **`OR o ||`** : o  
 * **`NOT o !`** : no  
-
 
 ---  
 
