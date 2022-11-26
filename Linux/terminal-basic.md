@@ -268,6 +268,7 @@ Realiza busquedas de texto dentro de un archivo, utilizando regex (Regular Expre
 
 ~$ grep -m num_lineas [regex] [archivoDondeBuscar]       m limita las lineas de busqueda
 ```  
+
 ### **Comando cut**  
 
 Extrae las partes seleccionadas de cada archivo en la salida estándar.  

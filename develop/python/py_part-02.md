@@ -70,7 +70,6 @@ activate  activate.csh  activate.fish  Activate.ps1  pip  pip3  pip3.10  python 
 * **`pip`** (viene por defecto en python)
 * **`pyenv`**  
 
-
 ### **Módulos populares**  
 
 * Requests  

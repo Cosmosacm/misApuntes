@@ -44,7 +44,6 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
 * **`OR o ||`** : o  
 * **`NOT o !`** : no  
 
-
 ---  
 
 ***[by Cosmosacm](https://cosmosacm.github.io/)***  
