@@ -8,8 +8,6 @@ Validar si los servicios **openSSH-client** y **openSSH-server** están instalad
     2. Seleccionar Aplicaciones (Apps)
     3. Características opcionales (optional features)
 
-
 Validar estatus de los puertos abiertos
 
     PS C:\> nestat -ano  
-

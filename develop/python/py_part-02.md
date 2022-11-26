@@ -361,7 +361,6 @@ Modos de apertura
 with open('./ruta/del/archivo.txt', 'r', encoding='utf-0') as nombre_identificador:
 ```  
 
-
 Reto final:
 
 Hangman Game: el juego del ahorcado.
