@@ -47,18 +47,21 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
 ## **Operadores de String**  
 
 * **`+`** : concatena cadenas de texto.  
-  ```python
-  >>>'Hola' + 'mundo'
-  Holamundo
-  ```
+
+    ```python
+    >>> 'Hola' + 'mundo'  
+    Holamundo  
+    ```  
 
 * **`*`** : concatena n veces la misma cadena de texto.  
+
   ```python
-  >>>'Hola mundo'*3
-  'hola mundohola mundohola mundo'
+  >>> 'Hola mundo'*3
+  'Hola mundoHola mundoHola mundo'
   ```
 
 * **`in`** : permite comprobar si un carácter o una cadena de texto está contenida dentro de otra cadena de texto.  
+
   ```python
   >>> 'nue' in 'Hola nuevo mundo'
   True
@@ -67,7 +70,8 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
   >>> 
   ```
 
-* **`[x:y]`** : permite extraer elementos consecutivos de una cadena de texto desde un punto incial hasta un punto final.  
+* **`[x:y]`** : permite extraer elementos consecutivos de una cadena de texto desde un punto inicial hasta un punto final.  
+
   ```python
   >>> 'hola mundo'[:3]
   'hol'
@@ -81,6 +85,7 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
 ## **Formateo del `print`**  
 
 * **`sep`** permite modificar el carácter por defecto de espacio en blanco como separador.  
+
   ```python
   >>> print(1,21,3)
   1 21 3
@@ -89,6 +94,7 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
   ```
 
 * **`end`** permite añadir una cadena de texto como elemento final del conjunto de elementos que se han enviado para mostrar, por defecto es un retorno de linea.  
+
   ```python
   >>> print(1,21,3)
   1 21 3
@@ -114,10 +120,10 @@ Indica que se va a sustituir un elemento en la cadena de texto, debe tener asoci
 * **`%o`** : número octal  
 * **`%x`** : número hexadecimal  
 
-```python
->>> print('Yo tengo %d, tú tienes %d y ella tiene %d %s' % (30, 23, 26, 'años'))
-Yo tengo 30, tú tienes 23 y ella tiene 26 años
-```
+  ```python
+  print('Yo tengo %d, tú tienes %d y ella tiene %d %s' % (30, 23, 26, 'años'))
+  Yo tengo 30, tú tienes 23 y ella tiene 26 años
+  ```
 
 ### **Función `format`**  
 
@@ -127,7 +133,6 @@ Esta conformada por los elementos que se desean agregar en una cadena de texto `
 >>> print('Yo tengo {2} {3}, tú tienes {0} {3} y ella tiene {1} {3}'.format(23, 26, 30, 'años'))
 Yo tengo 30 años, tú tienes 23 años y ella tiene 26 años
 ```
-
 
 ---  
 

@@ -6,7 +6,7 @@ Las penetration test (pruebas de penetración) se diferencian en términos de al
 
 Preparar las herramientas adecuadas del entorno de trabajo para el primer día de evaluación en una penetration test o al momento de realizar un laboratorio, aumenta la eficiencia (no perder tiempo).  
 
-* **preconfigurado**  
+* **pre-configurado**  
 * **organizado**  
 * **estructurado**  
 

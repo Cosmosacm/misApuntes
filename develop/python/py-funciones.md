@@ -38,7 +38,7 @@ Es un bloque de código que esta constituido por un conjunto de instrucciones pa
 def run():
     # bloque de código
     pass
-```  
+```
 
 ## **Entry point o punto de entrada del programa**
 
@@ -48,47 +48,79 @@ if __name__ == '__main__':
     run()
 ```  
 
-## **Métodos o Funciones buil-in**  
+## **Métodos o Funciones build-in**  
 
 ### **Métodos con string**  
 
-Como ejemplo se toma variable como cualquier variable que contiene un string o una cadena de texto  
+Como ejemplo se toma variable como una variable que contiene un string o cadena de texto.  
 
-* `variable.strip()`: El método `strip` eliminará todos los espacios en blanco al inicio y al final de la cadena de caracteres de la variable.  
-  * `lstrip()`: Eliminará los espacios en blanco al inicio.  
-  * `rstrip()`: Eliminará los espacios en blanco al final.  
+* **Métodos que devuelven un nuevo string**  
 
-* `variable.lower()`: El método `lower` convertirá todas las letras en minúsculas.  
-* `variable.upper()`: El método `upper` convertirá todas las letras en mayúsculas.  
-* `variable.capitalize()`: El método `capitalize` convertirá la primera letra de la cadena de caracteres en mayúscula.  
-* `variable.title()`: El método `title` convertirá la primera letra de cada palabra de una cadena en mayúscula.
-* `variable.replace(‘cadena_a_buscar’, ‘cadena_nueva’)`: El método `replace` remplazará un cadena de texto por otra.  
-* `len(variable)`: El método `len` calcula la longitud de la cadena de texto (total de caracteres) dentro de la variable.  
-* `variable.count('cadena_a_buscar')`: El método `count` calcula la cantidad de veces que aparece una cadena de texto dentro de otra.  
-* `variable.split('cadena_a_buscar')`: El método `split` convierte una cadena de texto en una lista de elementos separados por un carácter en concreto.  
-* `variable.splitlines()`: El método `splitlines` convierte una cadena de texto en una lista de elementos que se encuentran separados por saltos de linea.  
+| Command | Definition |
+| :-- | :-- |
+| `variable.strip()` | El método `strip` eliminará todos los espacios en blanco al inicio y al final |
+| `variable.lstrip()` | Eliminará los espacios en blanco al inicio |
+| `variable.rstrip()` | Eliminará los espacios en blanco al final |  
+| `variable.lower()` | El método `lower` convertirá todas las letras en minúsculas |
+| `variable.upper()` | El método `upper` convertirá todas las letras en mayúsculas |
+| `variable.capitalize()` | El método `capitalize` convertirá la primera letra en mayúscula |
+| `variable.title()` | El método `title` convertirá la primera letra de cada palabra en mayúscula |
+| `variable.swapcase()` | El método `swapcase` invierte las mayúsculas por minúsculas y viceversa |
+| `variable.replace(‘cadena_a_buscar’, ‘cadena_nueva’)` | El método `replace` remplazará una cadena de texto por otra |
+| `len(variable)` | El método `len` calcula la longitud de la cadena de texto (total de caracteres del string) |
+| `max(variable)` | El método `max` identifica en el string el carácter alfabético mayor |
+| `min(variable)` | El método `min` identifica en el string el carácter alfabético menor |
+| `variable.count('cadena_a_buscar')` | El método `count` calcula la cantidad de veces que aparece una cadena de texto dentro de otra |
+| `variable.split('cadena_a_buscar')` | El método `split` convierte una cadena de texto en una lista de elementos separados por un carácter en concreto |
+| `variable.splitlines()` | El método `splitlines` convierte una cadena de texto en una lista de elementos que se encuentran separados por saltos de linea |
+| `variable.find('cadena_a_buscar')` | El método `find` busca una cadena de texto dentro de la variable de izquierda a derecha |
+| `variable.rfind('cadena_a_buscar')` | El método `rfind` busca una cadena de texto dentro de la variable de derecha a izquierda |
+| `variable.center(tamaño_total_cadena, 'carácter')` | El método `center` centra el contenido de la variable dentro de una cadena de texto de mayor tamaño, añadiendo el carácter deseado a la izquierda y a la derecha de la variable |
+| `variable.ljust(tamaño_total_cadena, 'carácter')` | El método `ljust` ajusta a la izquierda el contenido de la variable dentro de una cadena de texto de mayor tamaño, añadiendo el carácter deseado a la derecha de la variable |
+| `variable.rjust(tamaño_total_cadena, 'carácter')` | El método `rjust` ajusta a la derecha el contenido de la variable dentro de una cadena de texto de mayor tamaño, añadiendo el carácter deseado a la izquierda de la variable |
+| `variable.zfill(tamaño_total_cadena)` | El método `zfill` ajusta a la derecha el contenido de la variable dentro de una cadena de texto de mayor tamaño, añadiendo ceros (0) a la izquierda de la variable |
 
-* `variable.center(tamaño_total_cadena, 'carácter')`: El método `center` centra la cadena de texto de la variable dentro de una cadena de texto mayor de tamaño que desea utilizar, añadiendo el carácter deseado a la izquierda y a la derecha del mismo.  
+* **Métodos que devuelven un True o False**  
+  Nota: los signos de puntuación ni los espacios en blanco son caracteres alfabéticos  
+
+| Command | Definition |
+| :-- | :-- |
+| `variable.isalnum()` | El método `isalnum` comprueba si todos los caracteres que componen el string son alfanuméricos (letras y números) o no |
+| `variable.isalpha()` | El método `isalpha` comprueba si todos los caracteres que componen el string son alfabéticos (solo letras) o no |
+| `variable.isdigit()` | El método `isdigit` comprueba si todos los caracteres que componen el string son dígitos o no |
+| `variable.numeric()` | El método `numeric` comprueba si todos los caracteres que componen el string tienen un representación numérica o no |
+| `variable.isdecimalt()` | El método `isdecimal` comprueba si todos los caracteres que componen el string tienen una representación numérica decimal o no |
+| `variable.islower()` | El método `islower` comprueba si todos los caracteres que componen el string están en minúscula o no |
+| `variable.isupper()` | El método `isupper` comprueba si todos los caracteres que componen el string están en mayúscula o no |
+| `variable.istitle()` | El método `istitle` comprueba si el primer carácter de todas las palabras que componen el string están en mayúscula y el resto de caracteres en minúscula o no |
+| `variable.isprintable()` | El método `isprintable` comprueba si todos los caracteres que componen el string son imprimibles  o no |
+| `variable.isspacer()` | El método `isspace` comprueba si todos los caracteres que componen el string son caracteres en blaco o no |
+| `variable.startwith('cadena_a_buscar')` | El método `starwith` comprueba si una cadena de texto a buscar esta contenida al inicio en el string o no |
+| `variable.endtwith('cadena_a_buscar')` | El método `starwith` comprueba si una cadena de texto a buscar esta contenida al final en el string o no |
 
 ### **Métodos con listas**  
 
 list()  -> []  
 
-* `lista.append(elemento)`: El método `append` agrega elementos al final de una lista.  
-* `lista.pop(indice)`: El método `pop` elimina el elemento que se encuentra en la posición del indice dado, y lo retorna como respuesta. Si no se coloca indicide por defecto elimina el ultimo elemento.  
-* `lista.sort()`: El método `sort` ordena la lista de menor a mayor.  
-* `lista.sorted()`: El método `capitalize` convertirá la primera letra de la cadena de caracteres en mayúscula.
-* del  
-* remove  
-* range  
-* len  
+| Command | Definition |
+| :-- | :-- |
+| `lista.append(elemento)` | El método `append` agrega elementos al final de una lista |
+| `lista.pop(indice)` | El método `pop` elimina el elemento que se encuentra en la posición del indice dado, y lo retorna como respuesta. Si no se coloca indicide por defecto elimina el ultimo elemento |
+| `lista.sort()`| El método `sort` ordena la lista de menor a mayor |
+| `lista.sorted()` | El método `sorted` convertirá la primera letra de la cadena de caracteres en mayúscula |
+| del | pendiente |
+| remove | pendiente |  
+| range | pendiente |
+| len | pendiente |
 
 ### **Métodos con tuplas**  
 
 tuple() -> ()
 
-* `tupla.count(elemento)`: El método `count` busca el elemento dentro de la tupla y retorna la cantidad de coincidencias que encuentre.  
-* `tupla.index(elemento, [star_index]..., [stop_index]..., )`: El método `index` busca el elemento dentro de la tupla y retorna index de la primera coincidencia que encuentre. Tiene como parámetros opcionales el index desde donde quiero iniciar y el index hasta donde quiero parar.  
+| Command | Definition |
+| :-- | :-- |
+| `tupla.count(elemento)` | El método `count` busca el elemento dentro de la tupla y retorna la cantidad de coincidencias que encuentre |
+| `tupla.index(elemento, [star_index]..., [stop_index]..., )` | El método `index` busca el elemento dentro de la tupla y retorna index de la primera coincidencia que encuentre. Tiene como parámetros opcionales el index desde donde quiero iniciar y el index hasta donde quiero parar |
 
 ### **Métodos con diccionarios**  
 
@@ -96,13 +128,13 @@ dict() -> {}
 
 Es una estructura de datos mutable que almacena diferentes tipos de valores, sin importar su orden; identifican a cada elemento por una clave o llave (key), la cual tiene su respectivo  valor (value)
 
-* `diccionario.keys()`: El método `keys` retornar las claves de un diccionario.  
-* `diccionario.values()`: El método `values` retorna los valores de un diccionario.  
-* `diccionario.items()`: El método `items` devuelve una lista de tuplas (primero la clave y luego el valor)
-
-.clear() —> Elimina todos los items del diccionario
-
-.pop(“n”) —> Elimina el elemento ingresado
+| Command | Definition |
+| :-- | :-- |
+| `diccionario.keys()` | El método `keys` retornar las claves de un diccionario |
+| `diccionario.values()` | El método `values` retorna los valores de un diccionario |
+| `diccionario.items()` | El método `items` devuelve una lista de tuplas (primero la clave y luego el valor) |
+| `diccionario.clear()` | Elimina todos los items del diccionario |
+| `diccionario.pop(“n”)` | Elimina el elemento ingresado |
 
 ## **Funciones Anónimas**
 
