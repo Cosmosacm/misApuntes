@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 # ========================= Password Generator =========================
-# by Cosmosacm...
+# Copyright by Cosmosacm...
 # * Genera contraseñas de manera aleatoria de manera segura
-# * se puede elegir el tamaño de carácteres de la contraseña
-# * puede contener: números, letras mayúsculas y minúsculas, carácteres 
+# * se puede elegir el tamaño de caracteres de la contraseña
+# * puede contener: números, letras mayúsculas y minúsculas, caracteres 
 #   especiales 
 # 
 
-import random, string
+import random
+import string
 
 
 def pwdGenerator(size: int):
@@ -15,10 +16,10 @@ def pwdGenerator(size: int):
     num = tuple('0123456789')
     # tupla con letras de la a-z concatenado con de la A-Z.
     letters = tuple(string.ascii_letters)
-    # tupla con carácteres especiales
-    specialCharts = tuple('!@#$%&/()=?*+-_.` ')
-    # concateno tuplas
-    allCharts = letters + specialCharts + num
+    # tupla con caracteres especiales
+    specialCharts = tuple(string.punctuation)
+    # concatenar tuplas
+    allCharts = letters + num + specialCharts + num
     # variable de tipo lista
     password = []
     for i in range(size):
@@ -28,7 +29,7 @@ def pwdGenerator(size: int):
     return ''.join(password)
 
 def run():
-    # variable bloolena para controlar el bucle while
+    # variable booleana para controlar el bucle while
     val = True
     # bucle while para validar la opción ingresada
     while val:
@@ -38,12 +39,12 @@ def run():
         # validar tamaño contraseña
         if size.isdigit():
             if int(size) < 14:
-                print('\n[!] El tamaño minimo es de 14 carácteres\n')
+                print('\n[!] El tamaño mínimo es de 14 caracteres\n')
                 # separa sección
                 separador = '--'
                 print(separador.center(72, '-'))
             elif int(size) >256:
-                print('\n[!] El tamaño máximo es de 256 carácteres\n')
+                print('\n[!] El tamaño máximo es de 256 caracteres\n')
                 # separa sección
                 separador = '--'
                 print(separador.center(72, '-'))
