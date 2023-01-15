@@ -1,6 +1,20 @@
 # **Sintaxis Python**  
 
-En Python si una variable se define con un único valor que no va a cambiar durante toda la ejecución del programa, se considera que es una constante.  
+## **Variables**  
+
+### **Operador de Asignación**  
+
+Una variable es un espacio en memoria en el que se puede almacenar cualquier tipo de objeto en Python.  
+
+El igual **`=`** es un operador de asignación utilizado para asignar un tipo de dato a una variable.  
+
+    var1 = 5
+    var2 = 'Mi nombre'
+    x = y
+
+### **Constantes**  
+
+En Python si una variable se define con un único valor que no va a cambiar durante toda la ejecución del programa, se considera que es una constante.
 
 Python una variable definida en mayúscula la trata como una constante.  
 
@@ -29,7 +43,7 @@ Python una variable definida en mayúscula la trata como una constante.
 * **`%`** : módulo, obtiene el resto de la división  
 * **`**`** : exponente  
 
-### Orden de precedencia de los operadores aritméticos  
+### **Orden de precedencia de los operadores aritméticos**  
 
 1. Operación exponente  
 2. Operación negación  
@@ -44,14 +58,36 @@ Para trabajar con booleanos `verdadero = True`, `falso = False`
 * **`OR o ||`** : o  
 * **`NOT o !`** : no  
 
+## **Operadores de Comparación**  
+
+retornan como resultado valores booleanos `verdadero = True`, `falso = False`  
+
+* **`==`** : igual a  
+* **`!=`** : no es igual a  
+* **`>`** : mayor qué  
+* **`>=`** : mayor o igual qué  
+* **`<`** : menor qué  
+* **`<=`** : menor o igual qué  
+
+## **Orden de Precedencia de Operadores**  
+
+| Prioridad | Operador | Observación |
+| :--: | :--: | :-- |
+| 1 |  `**`  | Exponente |
+| 2 |  `-`  | Negación |
+| 3 |  `*, /, //, %`  | multiplicación, división, división entera y módulo |
+| 4 |  `+, -`  | Suma y resta |
+| 5 |  `>, >=, <, <=`  | Mayor, mayor o igual, menor, menor o igual |
+| 6 |  `==, !=`  | Igualdad, desigualdad |  
+
 ## **Operadores de String**  
 
 * **`+`** : concatena cadenas de texto.  
 
-    ```python
-    >>> 'Hola' + 'mundo'  
-    Holamundo  
-    ```  
+  ```python
+  >>> 'Hola' + 'mundo'  
+  Holamundo  
+  ```  
 
 * **`*`** : concatena n veces la misma cadena de texto.  
 
@@ -120,10 +156,11 @@ Indica que se va a sustituir un elemento en la cadena de texto, debe tener asoci
 * **`%o`** : número octal  
 * **`%x`** : número hexadecimal  
 
-  ```python
-  print('Yo tengo %d, tú tienes %d y ella tiene %d %s' % (30, 23, 26, 'años'))
-  Yo tengo 30, tú tienes 23 y ella tiene 26 años
-  ```
+Ejemplo:
+```python
+>>> print('Yo tengo %d, tú tienes %d y ella tiene %d %s' % (30, 23, 26, 'años'))
+Yo tengo 30, tú tienes 23 y ella tiene 26 años
+```
 
 ### **Función `format`**  
 

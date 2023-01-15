@@ -94,9 +94,9 @@ Como ejemplo se toma variable como una variable que contiene un string o cadena 
 | `variable.isupper()` | El método `isupper` comprueba si todos los caracteres que componen el string están en mayúscula o no |
 | `variable.istitle()` | El método `istitle` comprueba si el primer carácter de todas las palabras que componen el string están en mayúscula y el resto de caracteres en minúscula o no |
 | `variable.isprintable()` | El método `isprintable` comprueba si todos los caracteres que componen el string son imprimibles  o no |
-| `variable.isspacer()` | El método `isspace` comprueba si todos los caracteres que componen el string son caracteres en blaco o no |
+| `variable.isspacer()` | El método `isspacer` comprueba si todos los caracteres que componen el string son caracteres en blaco o no |
 | `variable.startwith('cadena_a_buscar')` | El método `starwith` comprueba si una cadena de texto a buscar esta contenida al inicio en el string o no |
-| `variable.endtwith('cadena_a_buscar')` | El método `starwith` comprueba si una cadena de texto a buscar esta contenida al final en el string o no |
+| `variable.endtwith('cadena_a_buscar')` | El método `endwith` comprueba si una cadena de texto a buscar esta contenida al final en el string o no |
 
 ### **Métodos con listas**  
 
@@ -105,7 +105,7 @@ list()  -> []
 | Command | Definition |
 | :-- | :-- |
 | `lista.append(elemento)` | El método `append` agrega elementos al final de una lista |
-| `lista.pop(indice)` | El método `pop` elimina el elemento que se encuentra en la posición del indice dado, y lo retorna como respuesta. Si no se coloca indicide por defecto elimina el ultimo elemento |
+| `lista.pop(indice)` | El método `pop` elimina el elemento que se encuentra en la posición del indice dado, y lo retorna como respuesta. Si no se coloca índice por defecto elimina el ultimo elemento |
 | `lista.sort()`| El método `sort` ordena la lista de menor a mayor |
 | `lista.sorted()` | El método `sorted` convertirá la primera letra de la cadena de caracteres en mayúscula |
 | del | pendiente |
