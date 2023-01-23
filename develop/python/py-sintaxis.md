@@ -4,7 +4,7 @@
 
 ### **Operador de Asignación**  
 
-Una variable es un espacio en memoria en el que se puede almacenar cualquier tipo de objeto en Python.  
+Una variable es un espacio en memoria en el que se puede almacenar cualquier tipo de dato en Python. Las variables tienen 3 componentes, constan de un nombre con el cual se identifica, el valor o valores del dato que se almacena y tipo de  
 
 El igual **`=`** es un operador de asignación utilizado para asignar un tipo de dato a una variable.  
 
@@ -52,17 +52,25 @@ Python una variable definida en mayúscula la trata como una constante.
 
 ## **Operadores Lógicos**  
 
-Para trabajar con booleanos `verdadero = True`, `falso = False`  
+Se utilizan para realizar operaciones booleanas Para trabajar con booleanos `verdadero = True`, `falso = False`  
 
 * **`AND o &&`** : y  
 * **`OR o ||`** : o  
 * **`NOT o !`** : no  
 
-## **Operadores de Comparación**  
+## **Operadores de Comparación o Relacionales**  
 
-retornan como resultado valores booleanos `verdadero = True`, `falso = False`  
+Se utilizan para comparar valores, retornan como resultado valores booleanos `verdadero = True`, `falso = False`  
 
 * **`==`** : igual a  
+
+  ```python
+  >>> 5 == 5
+  True
+  >>> 5 == 3
+  False
+    ```
+
 * **`!=`** : no es igual a  
 * **`>`** : mayor qué  
 * **`>=`** : mayor o igual qué  
