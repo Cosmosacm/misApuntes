@@ -8,9 +8,11 @@ Una variable es un espacio en memoria en el que se puede almacenar cualquier tip
 
 El igual **`=`** es un operador de asignación utilizado para asignar un tipo de dato a una variable.  
 
-    var1 = 5
-    var2 = 'Mi nombre'
-    x = y
+```python
+var1 = 5
+var2 = 'Mi nombre'
+x = y
+```
 
 ### **Constantes**  
 
@@ -18,7 +20,9 @@ En Python si una variable se define con un único valor que no va a cambiar dura
 
 Python una variable definida en mayúscula la trata como una constante.  
 
-    CONSTANTE = 3.141592
+```python
+CONSTANTE = 3.141592
+```
 
 ## **Caracteres Especiales**  
 
@@ -62,20 +66,20 @@ Se utilizan para realizar operaciones booleanas Para trabajar con booleanos `ver
 
 Se utilizan para comparar valores, retornan como resultado valores booleanos `verdadero = True`, `falso = False`  
 
-* **`==`** : igual a  
+* **Igual a: `==`**  
 
   ```python
   >>> 5 == 5
   True
   >>> 5 == 3
   False
-    ```
+  ```
 
-* **`!=`** : no es igual a  
-* **`>`** : mayor qué  
-* **`>=`** : mayor o igual qué  
-* **`<`** : menor qué  
-* **`<=`** : menor o igual qué  
+* **No es igual a: `!=`**  
+* **Mayor qué: `>`**  
+* **Mayor o igual qué: `>=`**  
+* **Menor qué: `<`**  
+* **Menor o igual qué: `<=`**  
 
 ## **Orden de Precedencia de Operadores**  
 
@@ -165,6 +169,7 @@ Indica que se va a sustituir un elemento en la cadena de texto, debe tener asoci
 * **`%x`** : número hexadecimal  
 
 Ejemplo:
+
 ```python
 >>> print('Yo tengo %d, tú tienes %d y ella tiene %d %s' % (30, 23, 26, 'años'))
 Yo tengo 30, tú tienes 23 y ella tiene 26 años

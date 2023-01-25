@@ -1,8 +1,16 @@
 # **Comandos Básicos CMD**
 
+Shell de línea de comandos.  
 
+      C:\> cls			limpiar pantalla
+
+      C:\> ipconfig		validar a que ip de la red se conecta
+		validar si el dhcp esta asignando direccionamiento
+
+C:\> telnet
 
 ## ** Funcionalidades netstat **  
+
 
 	C:\> netstat -a
 
@@ -12,13 +20,6 @@
 Tener en cuenta la fecha y hora del reporte del incidente, y los 4 ítem incluidos en el registro de Windows (Aplicación; faltantes Seguridad, instalación y sistema)
 
 
-C:\> cls			limpiar pantalla
-
-C:\> ipconfig		validar a que ip de la red se conecta
-
-C:\> nslookup		validar si el dhcp esta asignando direccionamiento
-
-C:\> telnet
 
 inicio / panel de control / programas / activar y desactivar las caracteristicas de windows / se selecciona telnet
 
@@ -58,17 +59,16 @@ C:\> netsh wlan show profile name="nombre_red" key=clear
 C:\> ipconfig /flushdns		* Si se ha ejecutado correctamente aparece
 					* "Se vació con exito la caché de resolución de DNS"
 
+### **nslookup**  
+
+       C:\> nslookup
+
 Averiguar IP pública externa
 
-C:\> nslookup myip.opendns.com resolver1.opendns.com
+      :\> nslookup myip.opendns.com resolver1.opendns.com
 
+### **sfc**  
 
+      C:\WINDOWS\system32>sfc /verifyonly
 
-
-C:\WINDOWS\system32>sfc /VERIFYONLY
-
-
-C:\Windows>sfc /SCANNOW
-
-
-
+      C:\Windows>sfc /scannow

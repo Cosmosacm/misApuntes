@@ -136,10 +136,6 @@ six==1.16.0
 (name_entorno) ~$ pip3 install -r requirements.txt
 ```  
 
-```python
-
-```  
-
 ## **List Comprehensions**  
 
 `[element for element in iterable if condition]`
@@ -204,7 +200,7 @@ Probar y excepto que, hacer lo siguiente.
 
 ```python
 try: 
-    bloque_código_A   # seccion try
+    bloque_código_A   # sección try
 
 except Tipo_Error:
     bloque_código_B   # sección except
@@ -331,12 +327,12 @@ w+ -> Escritura y lectura. Sobre escribe el archivo si existe. Crea el archivo s
 a -> Añadido (agregar contenido). Crea el archivo si éste no existe
 a+ -> Añadido (agregar contenido) y lectura. Crea el archivo si éste no existe.
 
-Con respecto a lo mencionado por allí desde el minuto 1:46 hasta 2:33 aprox… realmente puedes manejar archivos .mp3, .mp4, .jpg, .png en python…es el pan nuestro de cada día en el area de visión artificial en donde librerias como openCV lo hacen bastante amigable e interesante…
+Con respecto a lo mencionado por allí desde el minuto 1:46 hasta 2:33 aprox… realmente puedes manejar archivos .mp3, .mp4, .jpg, .png en python…es el pan nuestro de cada día en el area de visión artificial en donde librerías como openCV lo hacen bastante amigable e interesante…
 por ejemplo, un video en formato .mp4 es perfectamente transformable en una matriz numérica que representa por medio de estos número los canales RGB que posee cada pixel y que en general almacena la totalidad del pixeles de una imagen…
 
 dejo este enlace para quien tenga curiosidad:
 
-https://docs.opencv.org/master/d7/da8/tutorial_table_of_content_imgproc.html
+https://docs.opencv.org/master/d7/da8/tutorial_table_of_content_imgproc.html  
 
 Para trabajar con archivos de M. Excel se puede utilizar el módulo OpenPyXL :
 

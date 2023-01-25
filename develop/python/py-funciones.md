@@ -12,7 +12,7 @@ Es un bloque de código que esta constituido por un conjunto de instrucciones pa
 
 * Sin parámetros
 
-  ``` python
+  ```python
   def nombreFuncion():
       # bloque de código
       pass
@@ -26,7 +26,7 @@ Es un bloque de código que esta constituido por un conjunto de instrucciones pa
       pass
   ```  
 
-  ``` python
+  ```python
     def nombreFuncion(parametro1: int, parametro2: str,parametroN: list):
         # bloque de código
         pass
@@ -34,7 +34,7 @@ Es un bloque de código que esta constituido por un conjunto de instrucciones pa
 
 ## **Función principal para correr el programa**  
 
-``` python
+```python
 def run():
     # bloque de código
     pass
@@ -42,7 +42,7 @@ def run():
 
 ## **Entry point o punto de entrada del programa**
 
-``` python
+```python
 if __name__ == '__main__':
     # ejecutar la función principal
     run()
@@ -220,6 +220,14 @@ allMultiplied2 = reduce(lambda x, y: x*y, myList)
 
 print(allMultiplied2)
 ```  
+
+## **Generadores**
+
+* Son estructuras que extraen valores de una función y se almacenan en objetos iterables (que se pueden recorrer).  
+
+* Los valores se almacenan de uno en uno.  
+
+* Cuando un generador almacena un valor, queda en un estado pausado, hasta que se solicite el siguiente valor, característica que se conoce como **suspensión de estado**.  
 
 ---  
 
