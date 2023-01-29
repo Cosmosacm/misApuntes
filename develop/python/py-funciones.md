@@ -1,4 +1,6 @@
-# **Funciones**  
+# **Funciones y Métodos**  
+
+## **Funciones**  
 
 Es un bloque de código que esta constituido por un conjunto de instrucciones para realizar una tarea en concreto.  
 
@@ -21,18 +23,18 @@ Es un bloque de código que esta constituido por un conjunto de instrucciones pa
 * Con parámetros
 
   ``` python
-  def nombreFuncion(parametro1, parametro2,parametroN):
+  def nombreFuncion(parametro1, parametro2, parametroN):
       # bloque de código
       pass
   ```  
 
   ```python
-    def nombreFuncion(parametro1: int, parametro2: str,parametroN: list):
+    def nombreFuncion(parametro1: int, parametro2: str, parametroN: list):
         # bloque de código
         pass
     ```
 
-## **Función principal para correr el programa**  
+### **Función principal para correr el programa**  
 
 ```python
 def run():
@@ -40,13 +42,41 @@ def run():
     pass
 ```
 
-## **Entry point o punto de entrada del programa**
+### **Entry point o punto de entrada del programa**
 
 ```python
 if __name__ == '__main__':
     # ejecutar la función principal
     run()
 ```  
+
+## **Métodos**  
+
+Un método es un tipo específico de función - se comporta como una función y se parece a una función, pero difiere en la forma en que actúa y en su estilo de invocación.  
+
+Un método es propiedad de los datos para los que trabaja, mientras que una función es propiedad de todo el código.  
+
+## **Sintaxis de una Método**  
+
+* Sin parámetros
+
+  ```python
+  resultado = datos.metodo()
+
+  >>> texto = 'Aprende a programar'
+  >>> texto.upper()
+  'APRENDE A PROGRAMAR'
+  ```  
+
+* Con parámetros
+
+  ``` python
+  resultado = datos.metodo(parametro1, parametro2, parametroN)
+  
+  >>> texto = 'Aprende a programar'
+  >>> texto.center(72, '=')
+  '==========================Aprende a programar==========================='
+  ```  
 
 ## **Métodos o Funciones build-in**  
 

@@ -2,11 +2,17 @@
 
 ## **Variables**  
 
+Una variable es un espacio en memoria en el que se puede almacenar el valor de cualquier tipo de dato en Python.  
+
+Las variables tienen 3 componentes:
+
+* Constan de un nombre con el cual se identifica.  
+* Deben tener un valor o valores del dato que se almacena.  
+* Tienen un tipo de dato.  
+
 ### **Operador de Asignación**  
 
-Una variable es un espacio en memoria en el que se puede almacenar cualquier tipo de dato en Python. Las variables tienen 3 componentes, constan de un nombre con el cual se identifica, el valor o valores del dato que se almacena y tipo de  
-
-El igual **`=`** es un operador de asignación utilizado para asignar un tipo de dato a una variable.  
+El igual **`=`** es un operador de asignación utilizado para asignar un valor de un determinado tipo de dato a una variable.  
 
 ```python
 var1 = 5
@@ -54,14 +60,6 @@ CONSTANTE = 3.141592
 3. Operaciones multiplicación, división, división entera y módulo  
 4. Operaciones de suma y resta
 
-## **Operadores Lógicos**  
-
-Se utilizan para realizar operaciones booleanas Para trabajar con booleanos `verdadero = True`, `falso = False`  
-
-* **`AND o &&`** : y  
-* **`OR o ||`** : o  
-* **`NOT o !`** : no  
-
 ## **Operadores de Comparación o Relacionales**  
 
 Se utilizan para comparar valores, retornan como resultado valores booleanos `verdadero = True`, `falso = False`  
@@ -81,16 +79,96 @@ Se utilizan para comparar valores, retornan como resultado valores booleanos `ve
 * **Menor qué: `<`**  
 * **Menor o igual qué: `<=`**  
 
+## **Operadores Lógicos**  
+
+Se utilizan para realizar operaciones booleanas, trabajan con booleanos `verdadero = True`, `falso = False`  
+
+* **`and`** : y  
+* **`or`** : o  
+* **`not`** : no  
+
+## **Operadores Bit a Bit**  
+
+Permiten manipular bits de datos individuales y realizan las operaciones lógicas bit a bit.
+
+**Nota**: solo funcionan con números enteros.
+
+* **`&`** : and
+* **`|`** : or  
+* **`~`** : not  
+* **`~`** : xor (o exclusivo)  
+
+### **Shifting**  
+
+Desplazamiento binario a la izquierda y desplazamiento binario a la derecha.  
+
+* El shifting a la izquierda consiste en agregar un cero a nivel de bits a la derecha del número lo que equivale a multiplicar por dos.
+  
+  ```python
+  >>> 7 << 1
+  14  # equivalente a decir 7 = 111 al desplazar un bit a la izquierda tenemos 1110 = 14
+  
+  >>> 2 << 2
+  8   # equivalente a decir 2 = 10 al desplazar dos bit a la izquierda tenemos 1000 = 8
+  ```
+
+* El shifting a la derecha consiste en quitar el primer bit a la derecha del número lo que equivale a dividir por dos.
+
+  ```python
+  >>> 5 >> 1
+  2  # equivalente a decir 5 = 101 al desplazar un bit a la derecha tenemos 10 = 2
+  
+  >>> 7 >> 2
+  1   # equivalente a decir 7 = 111 al desplazar dos bit a la derecha tenemos 1 = 1
+  ```
+
 ## **Orden de Precedencia de Operadores**  
 
 | Prioridad | Operador | Observación |
 | :--: | :--: | :-- |
-| 1 |  `**`  | Exponente |
-| 2 |  `-`  | Negación |
-| 3 |  `*, /, //, %`  | multiplicación, división, división entera y módulo |
-| 4 |  `+, -`  | Suma y resta |
-| 5 |  `>, >=, <, <=`  | Mayor, mayor o igual, menor, menor o igual |
-| 6 |  `==, !=`  | Igualdad, desigualdad |  
+| 1 | `~`, `+`, `-` | negación bit a bit, signo positivo, signo negativo |
+| 2 | `**`  | Exponente |
+| 3 | `*`, `/`, `//`, `%` | multiplicación, división, división entera y módulo |
+| 4 | `+`, `-` | Suma y resta |
+| 5 | `<<`, `>>` | Shifting |
+| 6 | `>`, `>=`, `<`, `<=`  | Mayor, mayor o igual, menor, menor o igual |
+| 7 | `==, !=`  | Igualdad, desigualdad |  
+| 8 | `&` | and bit a bit |  
+| 9 | `\|` | or bit a bit |  
+| 10 | `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `\|=`, `<<=`, `>>=` | Operaciones |  
+
+## **Operadores in y not in**  
+
+Son capaces de revisar una lista para verificar si un valor específico está almacenado dentro de la lista o no.  
+
+### **in**  
+
+Verifica si un elemento dado está actualmente almacenado en algún lugar dentro de una lista o un iterable a validar, el operador devuelve `True` si existe o `False` si no existe.  
+
+```python
+elemento in lista_a_validar
+
+>>> 'o' in 'Python'
+True  
+
+>>> 'a' in 'Python'
+False  
+```  
+
+### **not in**
+
+Verifica si un elemento dado está ausente en una lista o un iterable, el operador devuelve `True` si no existe o `False` si existe.  
+
+```python
+elemento not in lista_a_validar
+
+>>> 10 not in [1, 2, 3, 4, 5, 6, 7, 8]
+True
+
+>>> 3 not in [1, 2, 3, 4, 5, 6, 7, 8]
+False
+```  
+
 
 ## **Operadores de String**  
 
@@ -121,7 +199,7 @@ Se utilizan para comparar valores, retornan como resultado valores booleanos `ve
 * **`[x:y]`** : permite extraer elementos consecutivos de una cadena de texto desde un punto inicial hasta un punto final.  
 
   ```python
-  >>> 'hola mundo'[:3]
+  >>> 'hola mundo'[:3]+
   'hol'
   >>> msg = 'hola mundo'
   >>> msg[2:8]
