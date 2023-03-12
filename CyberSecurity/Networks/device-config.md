@@ -1,6 +1,6 @@
-# Device Configuration  
+# **Device Configuration**  
 
-## Router  
+## **Router**  
 
 Ejemplo de configuraciones de equipos CISCO que utilizan sistema operativo IOS
 
