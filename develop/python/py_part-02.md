@@ -12,6 +12,22 @@ Para visualizar el **zen de python**, en la consola interactiva de python se ing
 
 Se refiere a las **propuestas de mejora de python**, y contiene la documentación que conforma las **guías de estilos** del lenguaje, el **como funciona** y **como se debería escribir** de manera correcta.
 
+## **Entorno de Desarrollo Linux**  
+
+Instalar Python 3 y librerías necesarias.  
+
+```bash
+~$ sudo apt update
+
+~$ sudo apt upgrade -y
+
+~$ sudo apt install python3 -y
+
+~$ sudo apt install python3-pip -y
+
+~$ sudo apt install build-essential libssl-dev libffi-dev python3-dev -y
+```
+
 ## **Modules**
 
 Un modulo es un código escrito por nosotros mismos u otras personas creado para solucionar un problema en particular o proporcionar funcionalidades. El código se puede reutilizar de manera rápida en otros programas para evitar estar reinventando la rueda en cada ocasión.  
